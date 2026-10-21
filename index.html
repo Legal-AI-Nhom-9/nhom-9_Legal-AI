@@ -1,0 +1,758 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Legal AI — Trợ lý pháp lý thông minh | AI ứng dụng 06050</title>
+<meta name="description" content="Legal AI — trợ lý pháp lý thông minh cho sinh viên và người lao động trẻ. Đồ án học phần AI ứng dụng (06050), Trường Đại học Hùng Vương TP.HCM.">
+<link rel="icon" type="image/png" href="imgs/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,300..500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     LEGAL AI — TRANG ĐỒ ÁN HỌC PHẦN AI ỨNG DỤNG (06050)
+     Dựng từ trang mẫu của học phần, giữ đủ bốn mục.
+
+     CÁCH SỬA NỘI DUNG
+     • Mở tệp này trên máy (bấm đúp) → nút "✏️ Chỉnh sửa trang" ở góc phải dưới.
+     • Trên trang đã đăng: thêm  #sua  vào cuối địa chỉ để hiện nút.
+     • Sửa xong bấm "Tải index.html", chép đè tệp này, rồi đăng lại.
+     ═══════════════════════════════════════════════════════════════════════ -->
+
+<style>
+:root{
+  /* ── nền tối ── */
+  --navy-deep:#0A1B2B; --navy:#12293F; --dhv:#1A3C6E;
+  /* ── nền sáng ── */
+  --sand:#F1E7D8; --sand-2:#E5D9C6; --cream:#F7F1E8;
+  /* ── chữ và nhấn ── */
+  --ink:#2B2620; --cam:#F4831F; --cam-dark:#C4640D; --cam-soft:#F8A85F;
+  --mo-toi:rgba(247,241,232,.56); --mo-sang:rgba(43,38,32,.58);
+  --line-toi:rgba(247,241,232,.16); --line-sang:rgba(43,38,32,.16);
+  --display:clamp(2.6rem,7.6vw,7.4rem);
+  --E:cubic-bezier(.16,1,.3,1);
+  /* ── biến do JS ghi mỗi khung hình ── */
+  --p1:0; --p2:0; --p3:0;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--navy-deep);color:var(--cream);
+  font-family:Archivo,"Segoe UI",system-ui,sans-serif;
+  font-size:17px;line-height:1.62;overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit}
+
+/* ═══ chữ ═══ */
+.dis{
+  font-weight:800;font-stretch:74%;letter-spacing:-.03em;line-height:.94;
+  margin:0;text-wrap:balance;
+}
+.dis em{font-style:italic;font-weight:300;font-stretch:88%;color:var(--cam-soft)}
+.mono{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:400;
+}
+.lede{font-size:clamp(1rem,1.5vw,1.22rem);max-width:56ch;line-height:1.66}
+.wrap{width:min(1180px,90vw);margin:0 auto}
+.sang{background:var(--sand);color:var(--ink)}
+.sang .mono{color:var(--mo-sang)}
+.toi .mono{color:var(--mo-toi)}
+
+/* ═══ hạt phim phủ toàn trang ═══ */
+.grain{
+  position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.05;
+  mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
+}
+
+/* ═══ điều hướng ═══ */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:80;
+  display:flex;align-items:center;gap:26px;
+  padding:16px clamp(18px,5vw,54px);
+  background:linear-gradient(180deg,rgba(10,27,43,.82),rgba(10,27,43,0));
+  backdrop-filter:blur(3px);
+}
+nav .kh{background:var(--cream);border-radius:3px;padding:5px 8px;display:flex}
+nav .kh img{height:20px;width:auto}
+nav b{font-stretch:78%;letter-spacing:.02em;font-size:15px;margin-right:auto;color:var(--cream)}
+nav a{
+  color:var(--mo-toi);text-decoration:none;font-family:"IBM Plex Mono",monospace;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+  transition:color .4s var(--E);
+}
+nav a:hover,nav a:focus-visible{color:var(--cam-soft)}
+@media(max-width:760px){nav .an{display:none}}
+
+/* ═══ sân khấu ghim ═══ */
+.stage{position:relative}
+.pin{position:sticky;top:0;height:100svh;overflow:hidden;display:grid}
+
+/* ─── 1. HERO thị sai ─── */
+#s1{height:300svh}
+#s1 .anh{
+  position:absolute;left:0;right:0;top:-8%;bottom:-8%;
+  transform:translateY(calc(var(--p1) * -101px)) scale(calc(1.06 + var(--p1)*.06));
+  will-change:transform;
+}
+#s1 .anh img{width:100%;height:100%;object-fit:cover;object-position:80% 30%}
+#s1 .veil{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(10,27,43,.58) 0%,rgba(10,27,43,.14) 34%,rgba(10,27,43,.76) 100%);
+}
+#s1 .noi{
+  position:relative;align-self:end;padding:0 clamp(18px,5vw,54px) clamp(42px,8vh,96px);
+  opacity:calc(1 - var(--p1)*1.35);
+  transform:translateY(calc(var(--p1)*-60px));
+}
+#s1 h1{
+  /* cỡ tính từ SỐ KÝ TỰ để không tràn ở màn hẹp */
+  font-size:min(var(--display),calc(90vw / (9 * .52)));
+  white-space:nowrap;
+}
+.strap{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:22px}
+.strap span{color:var(--mo-toi)}
+.strap b{color:var(--cream);font-weight:500}
+.cuon{
+  position:absolute;left:50%;bottom:26px;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  opacity:calc(1 - var(--p1)*3);
+}
+.cuon i{display:block;width:1px;height:38px;background:linear-gradient(var(--cam),transparent);animation:sink 2.4s var(--E) infinite}
+@keyframes sink{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ─── 2. KHUNG MỞ ─── */
+#s2{height:360svh;background:var(--navy-deep)}
+#s2 .anh{
+  position:absolute;inset:0;
+  clip-path:inset(calc(34% - var(--p2)*34%) calc(30% - var(--p2)*30%) round 4px);
+  will-change:clip-path;
+}
+#s2 .anh img{width:100%;height:100%;object-fit:cover}
+#s2 .so{
+  position:absolute;top:clamp(76px,12vh,132px);right:clamp(18px,5vw,54px);
+  font-weight:800;font-stretch:70%;font-size:clamp(4rem,13vw,11rem);line-height:.8;
+  color:var(--cam);opacity:calc(.25 + var(--p2)*.75);
+}
+#s2 .cap{
+  position:absolute;left:0;right:0;bottom:0;
+  padding:0 clamp(18px,5vw,54px) clamp(30px,6vh,64px);
+  opacity:var(--p2);
+}
+#s2 .cap::before{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:56%;z-index:-1;
+  background:linear-gradient(0deg,rgba(10,27,43,.92),transparent);
+}
+#s2 .cap h2{max-width:20ch;font-size:clamp(1.9rem,4.4vw,3.6rem)}
+#s2 .cap p{max-width:52ch;color:var(--mo-toi);margin:.7em 0 0}
+
+/* ─── 3. MỐNG MẮT ─── */
+#s3{height:320svh;background:var(--sand)}
+#s3 .pin{place-items:center}
+#s3 .anh{
+  position:absolute;inset:0;
+  clip-path:circle(calc(var(--p3)*78%) at 50% 50%);
+  will-change:clip-path;
+}
+#s3 .anh img{width:100%;height:100%;object-fit:cover}
+#s3 h2{
+  position:relative;z-index:2;text-align:center;padding:0 6vw;
+  font-size:clamp(2.1rem,6.4vw,5.6rem);
+  color:#fff;mix-blend-mode:difference;
+  opacity:calc(1 - max(0, var(--p3) - .62) * 2.6);
+}
+#s3 .cap{
+  position:absolute;left:0;right:0;bottom:clamp(26px,6vh,58px);z-index:2;
+  display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;
+  padding:0 clamp(18px,5vw,54px);
+  opacity:calc(max(0, var(--p3) - .5) * 2);color:var(--cream);
+}
+#s3 .cap span{text-shadow:0 1px 14px rgba(10,27,43,.7)}
+
+
+/* ═══ dải thường ═══ */
+.band{padding:clamp(72px,11vh,148px) 0}
+.eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.eyebrow::after{content:"";flex:1;height:1px;background:currentColor;opacity:.22}
+.band h2{font-size:clamp(1.9rem,4.2vw,3.4rem);margin:0 0 .5em}
+.grid{display:grid;gap:clamp(20px,3vw,40px);margin-top:clamp(34px,5vh,62px)}
+.g3{grid-template-columns:repeat(auto-fit,minmax(255px,1fr))}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.col h3{font-size:1.16rem;font-stretch:84%;margin:.6em 0 .35em}
+.col p{margin:0;color:var(--mo-sang)}
+.toi .col p{color:var(--mo-toi)}
+.num{font-weight:800;font-stretch:70%;font-size:2.6rem;color:var(--cam);line-height:1}
+
+/* khung giữ chỗ ảnh */
+.ph{
+  aspect-ratio:4/3;border:1px solid var(--line-sang);display:grid;place-items:center;
+  text-align:center;padding:26px;color:var(--mo-sang);background:rgba(43,38,32,.03);
+}
+.toi .ph{border-color:var(--line-toi);color:var(--mo-toi);background:rgba(247,241,232,.03)}
+.ph b{display:block;color:var(--ink);font-stretch:84%;margin-bottom:6px}
+.toi .ph b{color:var(--cream)}
+.ph code{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.04em;text-transform:none}
+
+/* bảng giá / bảng kẻ dòng */
+.rows{margin-top:clamp(28px,4vh,54px)}
+.row{
+  display:grid;grid-template-columns:auto 1fr auto;gap:10px 26px;align-items:baseline;
+  padding:17px 0;border-top:1px solid var(--line-sang);
+}
+.toi .row{border-color:var(--line-toi)}
+.row b{font-stretch:84%;font-weight:600}
+.row .n{color:var(--mo-sang);font-size:14.5px;grid-column:2}
+.toi .row .n{color:var(--mo-toi)}
+.row .v{color:var(--cam-dark);white-space:nowrap}
+.toi .row .v{color:var(--cam)}
+
+/* nút tải */
+
+/* khối lưu ý */
+.luu{border-left:2px solid var(--cam);padding:16px 0 16px 22px;margin-top:30px;max-width:64ch}
+.luu p{margin:0;color:var(--mo-sang)}
+.toi .luu p{color:var(--mo-toi)}
+
+/* FAQ */
+details{border-top:1px solid var(--line-sang);padding:16px 0}
+details summary{cursor:pointer;font-stretch:84%;font-weight:600;list-style:none;display:flex;gap:14px}
+details summary::-webkit-details-marker{display:none}
+details summary::before{content:"+";color:var(--cam-dark);font-weight:800}
+details[open] summary::before{content:"–"}
+details p{margin:.7em 0 0 28px;color:var(--mo-sang);max-width:62ch}
+
+/* chân trang */
+footer{background:var(--navy-deep);padding:clamp(56px,8vh,100px) 0 44px;border-top:1px solid var(--line-toi)}
+.nhanai{border:1px solid rgba(244,131,31,.38);padding:22px 26px;margin-bottom:38px;max-width:78ch}
+.nhanai b{color:var(--cam)}
+.nhanai p{margin:.6em 0 0;color:var(--mo-toi);font-size:14.5px}
+.chan{display:flex;gap:26px;justify-content:space-between;flex-wrap:wrap;align-items:flex-end}
+.chan .kh{background:var(--cream);border-radius:3px;padding:9px 13px;display:inline-flex}
+.chan .kh img{height:34px;width:auto}
+.chan p{margin:0;color:var(--mo-toi);font-size:14px}
+
+/* khối tiến độ — xoá trước khi nộp */
+#tiendo{background:var(--navy);border-top:1px solid var(--line-toi)}
+#tiendo .row{border-color:var(--line-toi)}
+#tiendo .row b,#tiendo .row .v{color:var(--cream)}
+
+/* ═══ chuyển động theo từ ═══ */
+.w{display:inline-block;opacity:0;transform:translateY(.42em);
+   transition:opacity .9s var(--E) var(--d,0ms),transform .9s var(--E) var(--d,0ms)}
+.seen .w{opacity:1;transform:none}
+[data-rev]{opacity:0;transform:translateY(16px);
+   transition:opacity 1s var(--E) var(--d,0ms),transform 1s var(--E) var(--d,0ms)}
+[data-rev].seen{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .stage{height:auto!important}
+  .pin{position:static;height:auto;min-height:72svh;padding:76px 0}
+  #s1 .anh,#s2 .anh,#s3 .anh{position:relative;inset:auto;transform:none;clip-path:none!important;height:56svh}
+  #s1 .noi,#s2 .cap,#s3 .cap,.cuon{opacity:1!important;transform:none!important;position:static;padding:26px clamp(18px,5vw,54px)}
+  #s3 h2{mix-blend-mode:normal;color:var(--ink);opacity:1!important}
+  #s2 .so{position:static;opacity:1}
+  .w,[data-rev]{opacity:1!important;transform:none!important;transition:none}
+  .cuon i{animation:none}
+}
+
+/* ═══ ảnh thật trong Mục 2 ═══ */
+.anhkhung{margin:0}
+.anhkhung img{width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--line-sang);background:#12293F}
+.anhkhung figcaption{margin-top:10px;color:var(--mo-sang);font-size:14.5px}
+
+/* ═══ khung video ═══ */
+.vid{aspect-ratio:16/9;background:#000}
+.vid iframe{display:block;width:100%;height:100%;border:0}
+.nhanvid{margin-top:12px;color:var(--mo-sang);font-size:14px}
+
+/* ═══ CHẾ ĐỘ CHỈNH SỬA ═══ */
+.ed-fab{
+  position:fixed;right:18px;bottom:18px;z-index:200;
+  font:600 14px/1 Archivo,"Segoe UI",sans-serif;letter-spacing:.02em;
+  background:var(--cam);color:var(--navy-deep);border:0;border-radius:999px;
+  padding:13px 18px;cursor:pointer;box-shadow:0 8px 28px rgba(0,0,0,.35);
+}
+.ed-fab:hover{background:var(--cam-soft)}
+.ed-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:200;display:none;
+  background:var(--navy-deep);color:var(--cream);border-top:2px solid var(--cam);
+  padding:12px clamp(12px,3vw,28px);gap:10px;align-items:center;flex-wrap:wrap;
+  font:14px/1.4 Archivo,"Segoe UI",sans-serif;
+}
+body.editing .ed-bar{display:flex}
+body.editing .ed-fab{display:none}
+.ed-bar b{color:var(--cam-soft);margin-right:4px}
+.ed-bar .ed-st{flex:1;min-width:180px;color:var(--mo-toi);font-size:13px}
+.ed-bar button,.ed-panel button{
+  font:600 13px/1 Archivo,"Segoe UI",sans-serif;border-radius:6px;padding:10px 13px;cursor:pointer;
+  background:transparent;color:var(--cream);border:1px solid var(--line-toi);
+}
+.ed-bar button:hover,.ed-panel button:hover{border-color:var(--cam)}
+.ed-bar .chinh,.ed-panel .chinh{background:var(--cam);color:var(--navy-deep);border-color:var(--cam)}
+body.editing{padding-bottom:90px}
+body.editing [data-ed]{outline:1px dashed rgba(244,131,31,.55);outline-offset:3px;cursor:text;border-radius:2px}
+body.editing [data-ed]:focus{outline:2px solid var(--cam);background:rgba(244,131,31,.08)}
+body.editing .row,body.editing details{position:relative}
+.ed-ctl{position:absolute;right:0;top:6px;display:flex;gap:4px;z-index:5}
+.ed-ctl button{
+  width:28px;height:28px;border-radius:50%;border:1px solid var(--cam);background:var(--cream);
+  color:var(--cam-dark);font:700 15px/1 Archivo,sans-serif;cursor:pointer;padding:0;
+}
+.ed-panel{
+  position:fixed;top:0;right:0;bottom:0;z-index:210;width:min(420px,100vw);overflow:auto;
+  background:var(--navy);color:var(--cream);padding:22px;display:none;
+  box-shadow:-10px 0 40px rgba(0,0,0,.4);font:14px/1.5 Archivo,"Segoe UI",sans-serif;
+}
+.ed-panel.mo{display:block}
+.ed-panel h3{margin:0 0 6px;font-stretch:84%;font-size:1.2rem}
+.ed-panel p{color:var(--mo-toi);margin:0 0 14px;font-size:13px}
+.ed-panel .muc{border-top:1px solid var(--line-toi);padding:14px 0}
+.ed-panel img{width:100%;max-height:140px;object-fit:cover;border-radius:4px;background:#0A1B2B;margin-bottom:8px}
+.ed-panel label{display:block;font-size:12px;color:var(--mo-toi);margin:6px 0 3px}
+.ed-panel input,.ed-panel textarea{
+  width:100%;font:13px/1.4 Archivo,"Segoe UI",sans-serif;color:var(--ink);background:var(--cream);
+  border:1px solid transparent;border-radius:5px;padding:8px 10px;
+}
+.ed-panel textarea{min-height:70px;resize:vertical}
+.ed-panel .dong{display:flex;gap:8px;justify-content:space-between;align-items:center;margin-bottom:10px}
+
+/* chế độ chỉnh sửa: trang đứng yên như khi bật giảm chuyển động, dễ bấm vào chữ */
+body.editing .stage{height:auto!important}
+body.editing .pin{position:static;height:auto;min-height:60svh;padding:76px 0}
+body.editing #s1 .anh,body.editing #s2 .anh,body.editing #s3 .anh{position:relative;inset:auto;transform:none;clip-path:none!important;height:46svh}
+body.editing #s1 .noi,body.editing #s2 .cap,body.editing #s3 .cap,body.editing .cuon{opacity:1!important;transform:none!important;position:static;padding:26px clamp(18px,5vw,54px)}
+body.editing #s3 h2{mix-blend-mode:normal;color:var(--ink);opacity:1!important}
+body.editing #s3 .cap{color:var(--ink)}
+body.editing #s3 .cap span{text-shadow:none}
+body.editing #s2 .so{position:static;opacity:1}
+body.editing #s1 h1{white-space:normal}
+body.editing [data-rev]{opacity:1!important;transform:none!important;transition:none}
+</style>
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<nav>
+  <span class="kh"><img src="imgs/DHV_Logo.png" alt="Logo Trường Đại học Hùng Vương TP. Hồ Chí Minh"></span>
+  <b>LEGAL AI</b>
+  <a class="an" href="#ytuong">Ý tưởng</a>
+  <a class="an" href="#nhandien">Nhận diện</a>
+  <a class="an" href="#video">Video</a>
+  <a href="#nhom">Nhóm</a>
+</nav>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="stage toi" id="s1">
+  <div class="pin">
+    <div class="anh"><img src="imgs/hero.svg" alt="Hình minh hoạ nền xanh đậm: cán cân công lý màu cam, bong bóng chat hỏi “Chủ trọ giữ cọc có đúng?” và câu trả lời “Có 2 điều luật liên quan, bấm để đọc văn bản gốc”" fetchpriority="high"></div>
+    <div class="veil"></div>
+    <div class="noi wrap">
+      <p class="mono" data-rev>Ý tưởng khởi nghiệp sinh viên · Trợ lý pháp lý thông minh</p>
+      <h1 class="dis" data-split>LEGAL <em>AI</em></h1>
+      <p class="lede" data-split style="margin-top:.7em">Hỏi luật bằng tiếng Việt đời thường. Mỗi câu trả lời kèm điều luật gốc để bạn tự kiểm tra.</p>
+      <div class="strap mono">
+        <span data-rev><b>01</b> &nbsp;Thuê trọ · lao động · mua bán online</span>
+        <span data-rev><b>02</b> &nbsp;Luôn dẫn văn bản gốc</span>
+        <span data-rev><b>03</b> &nbsp;Biết khi nào cần luật sư</span>
+      </div>
+    </div>
+    <div class="cuon mono"><span>Cuộn xuống</span><i></i></div>
+  </div>
+</section>
+
+<!-- ══════════ MỤC 1 — Ý TƯỞNG KHỞI NGHIỆP ══════════ -->
+<section class="stage toi" id="s2">
+  <div class="pin">
+    <div class="anh"><img src="imgs/frame.svg" alt="Hình minh hoạ điện thoại mở ứng dụng Legal AI: câu hỏi về việc bị giữ tiền cọc, câu trả lời kèm hai nút dẫn tới văn bản gốc, và lời nhắc gặp luật sư khi đang có tranh chấp"></div>
+    <div class="so">01</div>
+    <div class="cap">
+      <p class="mono">Mục 1 · Ý tưởng khởi nghiệp</p>
+      <h2 class="dis" data-split>Hỏi luật bằng <em>tiếng Việt</em> đời thường</h2>
+      <p data-split>Mỗi câu trả lời kèm tên văn bản, số điều và đường dẫn tới văn bản gốc, để bạn tự kiểm tra chứ không phải tin suông.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band sang" id="ytuong">
+  <div class="wrap">
+    <p class="mono eyebrow" data-rev>Vấn đề · Giải pháp · Khách hàng</p>
+    <h2 class="dis" data-split>Ba câu hỏi phải trả lời <em>ngay</em></h2>
+    <div class="grid g3">
+      <div class="col" data-rev><div class="num">01</div><h3>Vấn đề</h3>
+        <p>Bạn ký hợp đồng thuê trọ trong năm phút. Đến lúc chủ nhà giữ cọc, bạn mới mở ra đọc lần đầu. Tụi mình và bạn bè quanh mình đều từng như vậy: công ty chậm lương, shop online không hoàn tiền, hợp đồng thử việc kéo dài mãi. Lên mạng hỏi thì mỗi nơi nói một kiểu. Thuê luật sư cho một khoản cọc ba triệu thì ít ai nghĩ tới. Còn tự đọc luật thì văn bản dài, khó hiểu và hay được sửa đổi.</p></div>
+      <div class="col" data-rev><div class="num">02</div><h3>Giải pháp</h3>
+        <p>Legal AI là trợ lý pháp lý chỉ làm ba việc quen thuộc với người trẻ: thuê trọ, hợp đồng lao động và mua bán online. Bạn hỏi bằng tiếng Việt bình thường, như nhắn tin cho bạn. Câu trả lời ngắn, dễ hiểu và luôn ghi rõ tên văn bản, số điều, kèm đường dẫn tới văn bản gốc trên Cơ sở dữ liệu quốc gia về văn bản pháp luật. Đó là điểm khác với hỏi một chatbot chung chung: bạn không cần tin tụi mình, chỉ cần bấm vào và tự đọc. Legal AI không thay luật sư. Khi bạn đang có tranh chấp hoặc vụ việc phức tạp, ứng dụng sẽ nói thẳng và chỉ bạn tới luật sư hoặc Trung tâm trợ giúp pháp lý nhà nước.</p></div>
+      <div class="col" data-rev><div class="num">03</div><h3>Khách hàng</h3>
+        <p>Người dùng đầu tiên là sinh viên đang ở trọ và người mới đi làm. Họ cần câu trả lời nhanh cho những chuyện vài triệu đồng, không đủ lớn để thuê luật sư nhưng đủ để mất ngủ. Nhóm thứ hai là chủ shop online nhỏ, muốn biết mình phải làm gì khi khách đòi đổi trả. Hỏi đáp miễn phí; gói soát hợp đồng thuê trọ và hợp đồng lao động có tính phí. Ứng dụng không hỏi họ tên hay số điện thoại. Tụi mình bắt đầu từ chính lớp mình và khu trọ quanh trường.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ MỤC 2 — THÔNG ĐIỆP VÀ BỘ NHẬN DIỆN ══════════ -->
+<section class="band" id="nhandien" style="background:var(--cream);color:var(--ink)">
+  <div class="wrap">
+    <p class="mono eyebrow" data-rev>Mục 2 · Thông điệp và bộ nhận diện</p>
+    <h2 class="dis" data-split>Thông điệp và <em>bộ nhận diện</em></h2>
+    <p class="lede" data-split>Một câu để nhớ, một hình chủ đề và một infographic giải thích cách dùng Legal AI trong ba bước.</p>
+    <div class="rows" style="margin-bottom:34px">
+      <div class="row" data-rev><b>Thông điệp chính</b><span class="n">Một câu, đọc là nhớ</span><span class="v mono">Hỏi luật dễ như nhắn tin</span></div>
+    </div>
+    <div class="grid g2">
+      <figure class="anhkhung" data-rev>
+        <img src="imgs/chu-de.svg" alt="Hình minh hoạ nền xanh đậm: cán cân công lý màu cam ở giữa, bong bóng chat ghi “Hỏi luật? Hỏi mình.”, phía dưới là chữ LEGAL AI">
+        <figcaption><p>Hình chủ đề</p></figcaption>
+      </figure>
+      <figure class="anhkhung" data-rev>
+        <img src="imgs/poster.svg" alt="Infographic nền kem, tiêu đề “Hỏi luật dễ như nhắn tin”, ba ô: 1 Hỏi bằng tiếng Việt, 2 Đọc điều luật gốc, 3 Biết khi nào cần luật sư; dòng cuối ghi có sử dụng AI tạo sinh và không thay thế tư vấn của luật sư">
+        <figcaption><p>Infographic · Ba bước dùng Legal AI</p></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ MỤC 3 — VIDEO MINH HỌA ══════════ -->
+<section class="stage sang" id="s3">
+  <div class="pin">
+    <div class="anh"><img src="imgs/iris.svg" alt="Ba tờ giấy nằm nghiêng: hợp đồng thuê nhà trọ, hợp đồng lao động, đơn hàng mua bán online, mỗi tờ có một đoạn được tô cam; phía dưới là biểu tượng kính lúp"></div>
+    <h2 class="dis" data-split>Chín mươi giây để <em>hiểu</em> Legal AI</h2>
+    <div class="cap mono">
+      <span>Mục 3 · Video giới thiệu 60–90 giây</span>
+      <span>Có phụ đề tiếng Việt · Có nhãn AI</span>
+    </div>
+  </div>
+</section>
+
+<section class="band sang" id="video">
+  <div class="wrap">
+    <p class="mono eyebrow" data-rev>Mục 3 · Video minh họa 60–90 giây</p>
+    <h2 class="dis" data-split>Xem Legal AI <em>hoạt động</em></h2>
+    <p class="lede" data-split>Một bạn sinh viên bị giữ tiền cọc, mở Legal AI hỏi bằng tiếng Việt và nhận câu trả lời kèm điều luật gốc.</p>
+    <div class="ph" id="videoBox" style="aspect-ratio:16/9;margin-top:34px" data-rev>
+      <div><b>Video đang được dựng</b>
+      <p style="margin:.5em 0">Mở chế độ chỉnh sửa, bấm “Ảnh &amp; video” và dán đường dẫn YouTube (chế độ Không công khai) để nhúng vào đây.</p></div>
+    </div>
+    <p class="nhanvid" data-rev>Nội dung có sử dụng AI tạo sinh.</p>
+  </div>
+</section>
+
+<!-- ══════════ MỤC 4 — THÔNG TIN NHÓM ══════════ -->
+<section class="band sang" id="nhom">
+  <div class="wrap">
+    <p class="mono eyebrow" data-rev>Mục 4 · Thông tin nhóm</p>
+    <h2 class="dis" data-split>Nhóm <em>thực hiện</em></h2>
+    <p class="lede" data-split>Nhóm __ · Lớp __ · Học phần AI ứng dụng (06050).</p>
+    <div class="rows">
+      <div class="row" data-rev><b>Họ và tên thành viên 1</b><span class="n">Nhóm trưởng · ý tưởng và nội dung Mục 1</span><span class="v mono">MSSV</span></div>
+      <div class="row" data-rev><b>Họ và tên thành viên 2</b><span class="n">Thông điệp và bộ nhận diện · Mục 2</span><span class="v mono">MSSV</span></div>
+      <div class="row" data-rev><b>Họ và tên thành viên 3</b><span class="n">Video và phụ đề · Mục 3</span><span class="v mono">MSSV</span></div>
+      <div class="row" data-rev><b>Họ và tên thành viên 4</b><span class="n">Kiểm chứng nội dung · đăng trang và nộp tệp zip</span><span class="v mono">MSSV</span></div>
+    </div>
+    <div class="rows" style="margin-top:34px">
+      <div class="row" data-rev><b>TS. Nguyễn Quốc Trình</b><span class="n">Viện Công nghệ tiên tiến và Trí tuệ nhân tạo</span><span class="v mono">Giáo viên hướng dẫn</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CÂU HỎI THƯỜNG GẶP ══════════ -->
+<section class="band" style="background:var(--sand-2);color:var(--ink)">
+  <div class="wrap">
+    <p class="mono eyebrow" data-rev>Câu hỏi thường gặp</p>
+    <h2 class="dis" data-split>Những điều <em>hay hỏi</em></h2>
+    <div style="margin-top:34px">
+      <details data-rev><summary>Legal AI có thay luật sư không?</summary><p>Không. Legal AI giúp bạn hiểu quy định liên quan và tự đọc văn bản gốc. Khi có tranh chấp hoặc vụ việc phức tạp, ứng dụng chỉ bạn tới luật sư hoặc Trung tâm trợ giúp pháp lý nhà nước.</p></details>
+      <details data-rev><summary>Nếu Legal AI trả lời sai thì sao?</summary><p>AI có thể sai. Vì vậy mỗi câu trả lời đều kèm đường dẫn tới văn bản gốc để bạn đối chiếu. Thông tin trên ứng dụng chỉ để tham khảo, không phải ý kiến tư vấn pháp lý chính thức.</p></details>
+      <details data-rev><summary>Luật thay đổi thì Legal AI cập nhật thế nào?</summary><p>Nhóm dự kiến đối chiếu định kỳ với Cơ sở dữ liệu quốc gia về văn bản pháp luật và ghi ngày cập nhật dưới mỗi câu trả lời.</p></details>
+      <details data-rev><summary>Ứng dụng có thu thập thông tin cá nhân không?</summary><p>Không yêu cầu họ tên hay số điện thoại. Trang web này cũng không có biểu mẫu thu thập thông tin cá nhân.</p></details>
+      <details data-rev><summary>Trang này có dùng AI không?</summary><p>Có. Xem nhãn nội dung AI ở chân trang, ghi rõ từng khâu.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="toi">
+  <div class="wrap">
+    <div class="nhanai" data-rev>
+      <b class="mono">🏷️ Nhãn nội dung do AI tạo sinh</b>
+      <p>Trang này có sử dụng công cụ AI tạo sinh (Claude) trong các khâu: soạn nháp nội dung Mục 1, nhóm đã đọc lại và biên tập; vẽ các hình minh hoạ; dựng mã trang web từ bản mẫu của học phần. Các khẳng định không truy được nguồn đã bị gỡ bỏ. Nhãn này thực hiện theo <b>Luật Trí tuệ nhân tạo 2025 (Luật số 134/2025/QH15)</b>.</p>
+    </div>
+    <div class="chan">
+      <span class="kh"><img src="imgs/DHV_Logo.png" alt="Logo Trường Đại học Hùng Vương TP. Hồ Chí Minh"></span>
+      <p><b>LEGAL AI</b> — dự án đồ án học phần, chưa phải dịch vụ đang hoạt động. Nội dung trên trang không phải tư vấn pháp lý.<br>
+         Đồ án học phần <b>AI ứng dụng (06050)</b> · Viện Công nghệ tiên tiến và Trí tuệ nhân tạo<br>
+         Trường Đại học Hùng Vương TP. Hồ Chí Minh · GVHD: TS. Nguyễn Quốc Trình</p>
+      <p class="mono">Hình minh hoạ: nhóm tạo, có hỗ trợ AI · Trang không thu thập thông tin cá nhân</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ════════ BẢN NHÁP CHỈNH SỬA — khôi phục trước khi chạy hiệu ứng ════════ */
+  var KEY = "legalai-ban-nhap-v1";
+  function bam(s){ var h = 5381; for (var i = 0; i < s.length; i++) h = ((h << 5) + h + s.charCodeAt(i)) | 0; return (h >>> 0).toString(36); }
+  var GOC = bam(document.body.innerHTML);
+  function docNhap(){ try { return JSON.parse(localStorage.getItem(KEY) || "null"); } catch (e) { return null; } }
+  function ghiNhap(v){ try { localStorage.setItem(KEY, JSON.stringify(v)); return true; } catch (e) { return false; } }
+  function xoaNhap(){ try { localStorage.removeItem(KEY); } catch (e) {} }
+  var nhap = docNhap();
+  /* chỉ khôi phục khi nháp được làm trên đúng tệp này — tệp mới thì bỏ qua nháp cũ */
+  if (nhap && nhap.goc === GOC && nhap.html) document.body.innerHTML = nhap.html;
+
+  var IT = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ── tách từ để chạy so le ── */
+  document.querySelectorAll("[data-split]").forEach(function(el){
+    var html = el.innerHTML, i = 0;
+    el.innerHTML = html.replace(/(<[^>]+>)|([^\s<]+)/g, function(m, tag, word){
+      if (tag) return tag;
+      return '<span class="w" style="--d:' + (i++ * 38) + 'ms">' + word + '</span> ';
+    });
+  });
+
+  /* ── độ trễ riêng cho từng phần tử ── */
+  document.querySelectorAll("[data-rev]").forEach(function(el, i){
+    el.style.setProperty("--d", ((i % 9) * 55) + "ms");
+  });
+
+  var io = null;
+  if (IT) {
+    document.querySelectorAll("[data-split],[data-rev]").forEach(function(el){ el.classList.add("seen"); });
+  } else {
+    io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add("seen"); io.unobserve(e.target); } });
+    }, { threshold: .12, rootMargin: "0px 0px -6% 0px" });
+    document.querySelectorAll("[data-split],[data-rev]").forEach(function(el){ io.observe(el); });
+  }
+
+  /* ── tiến độ từng sân khấu, ghi vào biến CSS ── */
+  var stages = [["s1","--p1"],["s2","--p2"],["s3","--p3"]]
+      .map(function(x){ return { el: document.getElementById(x[0]), v: x[1] }; })
+      .filter(function(s){ return s.el; });
+  var root = document.documentElement, cho = false;
+
+  function tien(){
+    cho = false;
+    var vh = window.innerHeight;
+    stages.forEach(function(s){
+      var r = s.el.getBoundingClientRect(), d = r.height - vh;
+      var p = d > 0 ? (-r.top) / d : (r.top < vh ? 1 : 0);
+      root.style.setProperty(s.v, Math.min(1, Math.max(0, p)).toFixed(4));
+    });
+  }
+  function xep(){ if (!cho){ cho = true; requestAnimationFrame(tien); } }
+
+  if (!IT){
+    addEventListener("scroll", xep, { passive: true });
+    addEventListener("resize", xep);
+    tien();
+  }
+
+  /* ── cảnh báo nếu ảnh không tải được ── */
+  addEventListener("load", function(){
+    document.querySelectorAll("img").forEach(function(im){
+      if (!im.naturalWidth) console.warn("Ảnh không tải được:", im.getAttribute("src"));
+    });
+  });
+
+  /* ════════════════════════════════════════════════════════════════════
+     CHẾ ĐỘ CHỈNH SỬA
+     Hiện nút khi mở tệp trên máy, hoặc thêm #sua vào cuối địa chỉ.
+     Sửa xong bấm "Tải index.html" rồi chép đè tệp trong thư mục và đăng lại.
+     ════════════════════════════════════════════════════════════════════ */
+  var CHO_SUA = location.protocol === "file:" || /^(localhost|127\.0\.0\.1)$/.test(location.hostname) || /sua/.test(location.hash);
+  if (!CHO_SUA) return;
+
+  var SEL = "h1,h2,h3,p,summary,.row b,.row .n,.row .v,.strap span,.ph b,.nhanai b,nav b,.num,.so,.cap span";
+  var body = document.body;
+  function qa(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+  function tao(tag, attrs, html){
+    var e = document.createElement(tag);
+    for (var k in attrs) e.setAttribute(k, attrs[k]);
+    if (html != null) e.innerHTML = html;
+    e.setAttribute("data-ed-ui", "");
+    return e;
+  }
+  function boTach(r){
+    qa(".w", r).forEach(function(s){ s.replaceWith(document.createTextNode(s.textContent)); });
+  }
+
+  var fab = tao("button", { "class": "ed-fab", type: "button" }, "✏️ Chỉnh sửa trang");
+  var bar = tao("div", { "class": "ed-bar" },
+    '<b>Đang chỉnh sửa</b>' +
+    '<span class="ed-st">Bấm vào chữ có viền cam để sửa. Nút ＋ / ✕ thêm, xoá dòng. Nháp tự lưu trên trình duyệt này.</span>' +
+    '<button type="button" data-l="anh">Ảnh &amp; video</button>' +
+    '<button type="button" data-l="tai" class="chinh">Tải index.html</button>' +
+    '<button type="button" data-l="huy">Huỷ bản nháp</button>' +
+    '<button type="button" data-l="xong">Xong</button>');
+  var panel = tao("div", { "class": "ed-panel", role: "dialog", "aria-label": "Ảnh và video" });
+  body.appendChild(fab); body.appendChild(bar); body.appendChild(panel);
+  var st = bar.querySelector(".ed-st");
+
+  function lamSua(r){
+    qa(SEL, r).forEach(function(el){
+      if (el.closest("[data-ed-ui]")) return;
+      var cha = el.parentElement && el.parentElement.closest(SEL);
+      if (cha && !cha.closest("[data-ed-ui]")) return;   // đã nằm trong một khối sửa được
+      el.setAttribute("contenteditable", "true");
+      el.setAttribute("data-ed", "");
+    });
+  }
+  function themNut(el){
+    if (el.querySelector(":scope > .ed-ctl")) return;
+    var c = tao("span", { "class": "ed-ctl", contenteditable: "false" },
+      '<button type="button" title="Nhân đôi dòng này" data-c="them">＋</button>' +
+      '<button type="button" title="Xoá dòng này" data-c="xoa">✕</button>');
+    el.appendChild(c);
+  }
+
+  function lamSach(goc){
+    qa("[data-ed-ui]", goc).forEach(function(e){ e.remove(); });
+    qa("[contenteditable]", goc).forEach(function(e){ e.removeAttribute("contenteditable"); e.removeAttribute("data-ed"); });
+    qa(".w", goc).forEach(function(s){ s.replaceWith(s.ownerDocument.createTextNode(s.textContent)); });
+    qa(".seen", goc).forEach(function(e){ e.classList.remove("seen"); });
+    qa("details[open]", goc).forEach(function(e){ e.removeAttribute("open"); });
+    qa("[style]", goc).forEach(function(e){
+      e.style.removeProperty("--d");
+      if (!e.getAttribute("style").trim()) e.removeAttribute("style");
+    });
+    ["--p1", "--p2", "--p3"].forEach(function(v){ goc.style.removeProperty(v); });
+    if (goc.getAttribute("style") !== null && !goc.getAttribute("style").trim()) goc.removeAttribute("style");
+    var b = goc.querySelector("body");
+    b.classList.remove("editing");
+    qa("[class]", goc).forEach(function(e){ if (!e.getAttribute("class").trim()) e.removeAttribute("class"); });
+    return goc;
+  }
+  function banSach(){ return lamSach(document.documentElement.cloneNode(true)); }
+
+  var hen = null;
+  function luu(){
+    clearTimeout(hen);
+    hen = setTimeout(function(){
+      var ok = ghiNhap({ goc: GOC, html: banSach().querySelector("body").innerHTML, luc: Date.now() });
+      var t = new Date();
+      st.textContent = ok
+        ? "Đã lưu nháp lúc " + t.toLocaleTimeString("vi-VN", { hour: "2-digit", minute: "2-digit" }) + " · nhớ bấm Tải index.html để có tệp đăng lên mạng."
+        : "Trình duyệt này không lưu được nháp — bấm Tải index.html trước khi đóng trang.";
+    }, 400);
+  }
+
+  function vao(){
+    body.classList.add("editing");
+    boTach(document);
+    qa("[data-split],[data-rev]").forEach(function(el){ el.classList.add("seen"); });
+    qa("details").forEach(function(d){ d.open = true; });
+    lamSua(document);
+    qa(".rows .row, details").forEach(themNut);
+  }
+  function ra(){
+    luu();
+    panel.classList.remove("mo");
+    qa(".ed-ctl").forEach(function(e){ e.remove(); });
+    qa("[contenteditable]").forEach(function(e){ e.removeAttribute("contenteditable"); e.removeAttribute("data-ed"); });
+    body.classList.remove("editing");
+  }
+
+  fab.addEventListener("click", vao);
+  bar.addEventListener("click", function(e){
+    var l = e.target.getAttribute("data-l");
+    if (l === "xong") ra();
+    if (l === "anh") moAnh();
+    if (l === "tai") tai();
+    if (l === "huy" && confirm("Huỷ toàn bộ chỉnh sửa chưa tải về và quay lại nội dung trong tệp?")) { xoaNhap(); location.reload(); }
+  });
+
+  body.addEventListener("click", function(e){
+    var b = e.target.closest(".ed-ctl button");
+    if (b) {
+      e.preventDefault();
+      var dong = b.closest(".row, details");
+      if (b.getAttribute("data-c") === "them") {
+        var moi = dong.cloneNode(true);
+        qa(".ed-ctl", moi).forEach(function(x){ x.remove(); });
+        dong.after(moi); themNut(moi);
+      } else if (confirm("Xoá dòng này?")) dong.remove();
+      luu(); return;
+    }
+    if (body.classList.contains("editing") && e.target.closest("summary")) e.preventDefault();
+  });
+  body.addEventListener("keydown", function(e){
+    if (body.classList.contains("editing") && e.target.closest && e.target.closest("summary") && (e.key === " " || e.key === "Enter")) {
+      e.preventDefault();
+      document.execCommand("insertText", false, e.key === " " ? " " : "");
+    }
+  });
+  body.addEventListener("input", function(e){ if (e.target.closest("[data-ed]")) luu(); });
+  body.addEventListener("paste", function(e){
+    if (!e.target.closest || !e.target.closest("[data-ed]")) return;
+    e.preventDefault();
+    var t = (e.clipboardData || window.clipboardData).getData("text");
+    document.execCommand("insertText", false, t);
+  });
+
+  /* ── bảng Ảnh & video ── */
+  function maYT(s){ var m = String(s).match(/(?:youtu\.be\/|[?&]v=|embed\/|shorts\/|live\/)([\w-]{11})/); return m ? m[1] : null; }
+  function moAnh(){
+    panel.innerHTML = "";
+    var dau = tao("div", {}, '<div class="dong"><h3>Ảnh &amp; video</h3><button type="button" class="chinh" data-p="dong">Đóng</button></div>' +
+      '<p>Đổi ảnh: chép tệp ảnh vào thư mục <b>imgs/</b> trước, rồi gõ đường dẫn, ví dụ <b>imgs/poster.png</b>. Mỗi ảnh bắt buộc có mô tả (alt) đúng nội dung ảnh.</p>');
+    panel.appendChild(dau);
+
+    var v = tao("div", { "class": "muc" },
+      '<h3>Video YouTube</h3><p>Đăng video ở chế độ <b>Không công khai</b>, bấm Chia sẻ, chép đường dẫn dán vào đây. Khi mở tệp trực tiếp trên máy, video có thể chưa phát; đăng lên Netlify hoặc GitHub sẽ phát bình thường.</p>' +
+      '<label>Đường dẫn YouTube</label><input type="text" data-p="yt" placeholder="https://youtu.be/...">' +
+      '<div style="margin-top:8px"><button type="button" data-p="nhung" class="chinh">Nhúng video</button></div>');
+    panel.appendChild(v);
+
+    qa("img").forEach(function(im, i){
+      if (im.closest("[data-ed-ui]")) return;
+      var m = tao("div", { "class": "muc" },
+        '<img alt="">' +
+        '<label>Đường dẫn ảnh</label><input type="text" data-k="src">' +
+        '<label>Mô tả ảnh (alt)</label><textarea data-k="alt"></textarea>');
+      var xem = m.querySelector("img"), s = m.querySelector("[data-k=src]"), a = m.querySelector("[data-k=alt]");
+      xem.src = im.getAttribute("src"); s.value = im.getAttribute("src"); a.value = im.getAttribute("alt") || "";
+      s.addEventListener("change", function(){ im.setAttribute("src", s.value.trim()); xem.src = s.value.trim(); luu(); });
+      a.addEventListener("input", function(){ im.setAttribute("alt", a.value); luu(); });
+      panel.appendChild(m);
+    });
+    panel.classList.add("mo");
+  }
+  panel.addEventListener("click", function(e){
+    var p = e.target.getAttribute("data-p");
+    if (p === "dong") panel.classList.remove("mo");
+    if (p === "nhung") {
+      var id = maYT(panel.querySelector("[data-p=yt]").value);
+      if (!id) { alert("Không đọc được mã video. Hãy dán đường dẫn dạng https://youtu.be/xxxxxxxxxxx hoặc https://www.youtube.com/watch?v=xxxxxxxxxxx"); return; }
+      var box = document.getElementById("videoBox");
+      box.className = "vid";
+      box.removeAttribute("style");
+      box.setAttribute("style", "margin-top:34px");
+      box.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '" title="Video giới thiệu dự án Legal AI" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>';
+      luu();
+      alert("Đã nhúng video. Nhớ bấm Tải index.html.");
+    }
+  });
+
+  /* ── tải tệp đã sửa ── */
+  function tai(){
+    var html = "<!doctype html>\n" + banSach().outerHTML;
+    var url = URL.createObjectURL(new Blob([html], { type: "text/html;charset=utf-8" }));
+    var a = document.createElement("a");
+    a.href = url; a.download = "index.html";
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function(){ URL.revokeObjectURL(url); }, 1500);
+    st.textContent = "Đã tải index.html. Chép đè vào thư mục trang web (cạnh thư mục imgs/), rồi đăng lại lên Netlify hoặc GitHub.";
+  }
+
+  if (/sua/.test(location.hash)) vao();
+})();
+</script>
+</body>
+</html>
