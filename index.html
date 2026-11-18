@@ -100,7 +100,7 @@ nav a:hover,nav a:focus-visible{color:var(--cam-soft)}
   will-change:transform;
 }
 #s1 .anh img{width:100%;height:100%;object-fit:cover;object-position:80% 30%}
-#s1 .veil{
+#s1 .veil{pointer-events:none;
   position:absolute;inset:0;
   background:linear-gradient(180deg,rgba(10,27,43,.58) 0%,rgba(10,27,43,.14) 34%,rgba(10,27,43,.76) 100%);
 }
@@ -274,6 +274,13 @@ footer{background:var(--navy-deep);padding:clamp(56px,8vh,100px) 0 44px;border-t
 
 @media(max-width:600px){.row{grid-template-columns:1fr auto}.row .n{grid-column:1 / -1}}
 
+/* ═══ liên kết văn bản gốc ở đầu trang ═══ */
+.thu-goc{margin:.9em 0 0;font-size:15px;color:var(--mo-toi);max-width:60ch}
+.thu-goc a{color:var(--cam-soft);text-underline-offset:3px}
+.thu-goc a:hover,.thu-goc a:focus-visible{color:var(--cream)}
+details p a{color:var(--cam-dark);text-underline-offset:3px}
+details{scroll-margin-top:84px}
+
 /* ═══ thẻ thành viên ═══ */
 .team{display:grid;margin-top:clamp(28px,4vh,54px)}
 .tv{display:grid;grid-template-columns:auto 1fr;gap:6px clamp(18px,3vw,40px);padding:26px 0;border-top:1px solid var(--line-sang)}
@@ -376,6 +383,7 @@ body.editing [data-rev]{opacity:1!important;transform:none!important;transition:
       <p class="mono" data-rev>Ý tưởng khởi nghiệp sinh viên · Trợ lý pháp lý thông minh</p>
       <h1 class="dis" data-split>LEGAL <em>AI</em></h1>
       <p class="lede" data-split style="margin-top:.7em">Hỏi luật bằng tiếng Việt đời thường. Mỗi câu trả lời kèm điều luật gốc để bạn tự kiểm tra.</p>
+      <p class="thu-goc" data-rev>Chủ trọ giữ cọc có đúng? <a href="#hoi-coc">Xem câu trả lời mẫu</a> · <a href="https://vbpl.vn/TW/Pages/vbpq-toanvan.aspx?ItemID=95942" target="_blank" rel="noopener">Đọc văn bản gốc: Điều 328 Bộ luật Dân sự 2015 ↗</a></p>
       <div class="strap mono">
         <span data-rev><b>01</b> &nbsp;Thuê trọ · lao động · mua bán online</span>
         <span data-rev><b>02</b> &nbsp;Luôn dẫn văn bản gốc</span>
@@ -563,6 +571,7 @@ body.editing [data-rev]{opacity:1!important;transform:none!important;transition:
     <p class="mono eyebrow" data-rev>Câu hỏi thường gặp</p>
     <h2 class="dis" data-split>Những điều <em>hay hỏi</em></h2>
     <div style="margin-top:34px">
+      <details data-rev id="hoi-coc"><summary>Câu trả lời mẫu: báo trước rồi mà chủ trọ vẫn giữ cọc, có đúng không?</summary><p>Còn tuỳ bạn đã thực hiện hợp đồng thuê ra sao. Khoản 2 Điều 328 Bộ luật Dân sự 2015 quy định: “Trường hợp hợp đồng được giao kết, thực hiện thì tài sản đặt cọc được trả lại cho bên đặt cọc hoặc được trừ để thực hiện nghĩa vụ trả tiền; nếu bên đặt cọc từ chối việc giao kết, thực hiện hợp đồng thì tài sản đặt cọc thuộc về bên nhận đặt cọc; nếu bên nhận đặt cọc từ chối việc giao kết, thực hiện hợp đồng thì phải trả cho bên đặt cọc tài sản đặt cọc và một khoản tiền tương đương giá trị tài sản đặt cọc, trừ trường hợp có thỏa thuận khác.” Nghĩa là: nếu bạn ở đủ thời hạn, hoặc trả phòng đúng điều khoản báo trước đã ghi trong hợp đồng, chủ trọ phải trả lại cọc hoặc trừ vào khoản tiền bạn còn nợ (tiền phòng, điện nước). Chủ trọ chỉ được giữ cọc khi bạn là bên không thực hiện hợp đồng, hoặc khi hợp đồng có thoả thuận khác. Vì vậy hãy đọc lại điều khoản về tiền cọc và trả phòng trong hợp đồng của bạn. <a href="https://vbpl.vn/TW/Pages/vbpq-toanvan.aspx?ItemID=95942" target="_blank" rel="noopener">Đọc toàn văn Bộ luật Dân sự 2015 trên Cơ sở dữ liệu quốc gia về văn bản pháp luật ↗</a> (tìm Điều 328). Đây là thông tin tham khảo; nếu đang tranh chấp, hãy hỏi luật sư hoặc Trung tâm trợ giúp pháp lý nhà nước.</p></details>
       <details data-rev><summary>Legal AI có thay luật sư không?</summary><p>Không. Legal AI giúp bạn hiểu quy định liên quan và tự đọc văn bản gốc. Khi có tranh chấp hoặc vụ việc phức tạp, ứng dụng chỉ bạn tới luật sư hoặc Trung tâm trợ giúp pháp lý nhà nước.</p></details>
       <details data-rev><summary>Nếu Legal AI trả lời sai thì sao?</summary><p>AI có thể sai. Vì vậy mỗi câu trả lời đều kèm đường dẫn tới văn bản gốc để bạn đối chiếu. Thông tin trên ứng dụng chỉ để tham khảo, không phải ý kiến tư vấn pháp lý chính thức.</p></details>
       <details data-rev><summary>Luật thay đổi thì Legal AI cập nhật thế nào?</summary><p>Nhóm dự kiến đối chiếu định kỳ với Cơ sở dữ liệu quốc gia về văn bản pháp luật và ghi ngày cập nhật dưới mỗi câu trả lời.</p></details>
@@ -578,7 +587,7 @@ body.editing [data-rev]{opacity:1!important;transform:none!important;transition:
     <p class="mono eyebrow" data-rev>Nguồn tham khảo · đã đối chiếu văn bản gốc</p>
     <h2 class="dis" data-split>Căn cứ <em>nêu trên trang</em></h2>
     <ol class="nguon">
-      <li data-rev>Quốc hội (2015). <b>Bộ luật Dân sự</b>, Luật số 91/2015/QH13 — Điều 328 (đặt cọc).</li>
+      <li data-rev>Quốc hội (2015). <b>Bộ luật Dân sự</b>, Luật số 91/2015/QH13 — Điều 328 (đặt cọc). <a href="https://vbpl.vn/TW/Pages/vbpq-toanvan.aspx?ItemID=95942" target="_blank" rel="noopener">Toàn văn trên vbpl.vn ↗</a></li>
       <li data-rev>Quốc hội (2019). <b>Bộ luật Lao động</b>, Luật số 45/2019/QH14 — quy định về hợp đồng lao động và thử việc.</li>
       <li data-rev>Quốc hội (2023). <b>Luật Bảo vệ quyền lợi người tiêu dùng</b>, Luật số 19/2023/QH15 — quyền của người mua khi mua bán trực tuyến.</li>
       <li data-rev>Quốc hội (2017). <b>Luật Trợ giúp pháp lý</b>, Luật số 11/2017/QH14 — Trung tâm trợ giúp pháp lý nhà nước.</li>
@@ -675,6 +684,15 @@ body.editing [data-rev]{opacity:1!important;transform:none!important;transition:
       if (!im.naturalWidth) console.warn("Ảnh không tải được:", im.getAttribute("src"));
     });
   });
+
+  /* ── bấm liên kết tới một câu hỏi thường gặp thì tự mở câu đó ── */
+  function moTheoDiaChi(){
+    var id = decodeURIComponent(location.hash.slice(1));
+    var d = id && document.getElementById(id);
+    if (d && d.tagName === "DETAILS") { d.open = true; d.classList.add("seen"); }
+  }
+  addEventListener("hashchange", moTheoDiaChi);
+  moTheoDiaChi();
 
   /* ════════════════════════════════════════════════════════════════════
      CHẾ ĐỘ CHỈNH SỬA
