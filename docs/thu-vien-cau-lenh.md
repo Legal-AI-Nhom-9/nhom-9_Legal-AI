@@ -1,6 +1,6 @@
 # THƯ VIỆN CÂU LỆNH — DỰ ÁN LEGAL AI
 
-**Nhóm:** 9 · **Lớp:** ………… · **Học phần:** AI ứng dụng (06050)
+**Nhóm:** 9 (15 thành viên) · **Học phần:** AI ứng dụng (06050)
 **Viện Công nghệ tiên tiến và Trí tuệ nhân tạo — Trường Đại học Hùng Vương TP. Hồ Chí Minh**
 **Công cụ AI:** Claude (Anthropic)
 

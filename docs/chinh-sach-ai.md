@@ -1,6 +1,6 @@
 # CHÍNH SÁCH SỬ DỤNG AI CÓ TRÁCH NHIỆM — DỰ ÁN LEGAL AI
 
-**Nhóm:** ……………… · Học phần AI ứng dụng (06050) — Viện Công nghệ tiên tiến và Trí tuệ nhân tạo, Trường Đại học Hùng Vương TP. Hồ Chí Minh
+**Nhóm:** 9 (15 thành viên) · Học phần AI ứng dụng (06050) — Viện Công nghệ tiên tiến và Trí tuệ nhân tạo, Trường Đại học Hùng Vương TP. Hồ Chí Minh
 
 ## 1. Chúng tôi dùng AI vào việc gì
 

@@ -1,6 +1,6 @@
 # KỊCH BẢN VIDEO MINH HỌA — DỰ ÁN LEGAL AI
 
-**Nhóm:** ……………… · **Học phần:** AI ứng dụng (06050)
+**Nhóm:** 9 · **Phụ trách video (phần 03):** Nguyễn Huỳnh Thanh Hoàng, Lưu Chấn Huy, Võ Văn Luân · **Học phần:** AI ứng dụng (06050)
 **Viện Công nghệ tiên tiến và Trí tuệ nhân tạo — Trường Đại học Hùng Vương TP. Hồ Chí Minh**
 
 ---

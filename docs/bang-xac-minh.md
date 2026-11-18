@@ -1,7 +1,7 @@
 # BẢNG XÁC MINH — DỰ ÁN LEGAL AI
 
 **Ngày đối chiếu:** 18/11/2026 · **Cách làm:** tra cứu trực tuyến từng văn bản (có Claude hỗ trợ tìm kiếm), so số hiệu, ngày thông qua, hiệu lực và điều khoản với nội dung trên trang. Nguồn đối chiếu ghi ở cột cuối.
-**Người phụ trách phần 04 xem lại và xác nhận:** ……………………………
+**Người phụ trách phần 04 xem lại và xác nhận:** Lê Thị Hoài Thanh, Lê Viết Thành, Nguyễn Phát Thịnh
 
 ## 1. Văn bản pháp luật nêu trên trang và trong video
 
