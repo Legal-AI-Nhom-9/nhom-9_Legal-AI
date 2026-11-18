@@ -23,7 +23,7 @@ Mã nguồn: https://github.com/Legal-AI-Nhom-9/nhom-9_Legal-AI
 |---|---|---|---|
 | 01 | Ý tưởng khởi nghiệp và nội dung | Xác định vấn đề, giải pháp, khách hàng (thuê trọ, lao động, mua bán online); viết Mục 1; soạn Câu hỏi thường gặp và các lưu ý giới hạn trách nhiệm | |
 | 02 | Thông điệp và bộ nhận diện | Chọn thông điệp “Hỏi luật dễ như nhắn tin”, biểu tượng, bảng màu, font; dựng hình chủ đề, infographic, hình minh hoạ | |
-| 03 | Kịch bản và dựng video | Kịch bản 10 cảnh, 88 giây, nhân vật hư cấu; dựng video có phụ đề tiếng Việt, nhãn AI suốt video | |
+| 03 | Kịch bản và dựng video | Kịch bản 10 cảnh, 88 giây, nhân vật hư cấu; dựng video có lời dẫn (giọng tổng hợp), nhạc nền tự tạo, phụ đề tiếng Việt, nhãn AI suốt video | |
 | 04 | Kiểm chứng pháp lý và đạo đức | Đối chiếu căn cứ với văn bản gốc; kiểm tra 7 nguồn tham khảo; rà nhãn AI và dữ liệu cá nhân (`docs/bang-xac-minh.md`) | |
 | 05 | Lập trình, đăng trang và hồ sơ nộp | HTML/CSS/JS, chế độ chỉnh sửa, hiển thị điện thoại; quản lý kho GitHub, GitHub Pages; Readme, docs, tệp zip | |
 

@@ -18,7 +18,7 @@ Người phụ trách: thành viên phần 04 (Kiểm chứng pháp lý và đ�
 | Lỗi bị trừ | Tình trạng |
 |---|---|
 | Tài liệu tham khảo bịa đặt (−2,0/tài liệu) | 7 nguồn ở mục “Nguồn tham khảo” đều là văn bản có thật, ghi đủ số hiệu — chờ đánh dấu bảng trên |
-| Hình, giọng người thật chưa được phép (−2,0) | Không có hình người; video không có giọng; nhân vật Lan hư cấu, công bố ở cảnh đầu |
+| Hình, giọng người thật chưa được phép (−2,0) | Không có hình người; lời dẫn là giọng máy tổng hợp (Piper, dữ liệu VAIS-1000, CC BY 4.0, đã ghi nguồn), không mô phỏng người cụ thể; nhân vật Lan hư cấu, công bố ở cảnh đầu |
 | Dữ liệu cá nhân chưa ẩn danh đưa vào AI (−2,0) | Không đưa họ tên, MSSV, hợp đồng thật vào AI |
 | Biểu mẫu thu thập dữ liệu thiếu thông báo (−2,0) | Trang **không có biểu mẫu** |
 | Trang web không truy cập được khi chấm (−2,0) | Kiểm tra đường dẫn GitHub Pages bằng cửa sổ ẩn danh trước và sau khi nộp |

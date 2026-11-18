@@ -10,6 +10,7 @@
 | Viết nội dung giới thiệu | ✅ Soạn nháp, nhóm biên tập | Claude | Phần 01 |
 | Hình minh hoạ, infographic | ✅ | Claude (vẽ SVG) | Phần 02 |
 | Kịch bản, dựng video, phụ đề | ✅ | Claude, Python, ffmpeg | Phần 03 |
+| Lời dẫn video | ✅ Giọng tổng hợp | Piper `vi_VN-vais1000-medium` (CC BY 4.0) | Phần 03 |
 | Nội dung pháp lý | ⚠️ Chỉ để tra hướng | Claude | **Phần 04 tự đọc văn bản gốc** |
 | Mã trang web | ✅ | Claude | Phần 05 |
 

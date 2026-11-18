@@ -289,12 +289,17 @@ Bước 3 — Với lời dẫn ở bước 2, chia thành 10 cảnh; ghép mỗ
               chuyển cảnh mờ dần 0,6 giây; khung chữ nền xanh đậm hoặc kem.
 ⑦ Ràng buộc:  Dòng "Nội dung có sử dụng AI tạo sinh" ở góc phải trên suốt
               video; cảnh đầu ghi rõ nhân vật hư cấu; không hình, không giọng
-              người thật; không nhạc có bản quyền.
+              người thật; lời dẫn dùng giọng đọc tổng hợp có giấy phép; nhạc
+              nền tự sinh, không dùng bản nhạc có bản quyền.
 ```
 
 **Vì sao chọn:** Nhóm không có cảnh quay thật và không muốn dùng hình người.
-**Tinh chỉnh (đã xảy ra):** Lần dựng đầu dài **94 giây, vượt giới hạn 90 giây**. Nhóm rút mỗi cảnh giữa 1 giây, còn **88 giây**.
-**Kết quả:** Video đang nhúng ở Mục 3. Hạn chế còn lại: chưa có giọng đọc.
+**Tinh chỉnh (đã xảy ra):**
+1. Lần dựng đầu dài **94 giây, vượt giới hạn 90 giây**. Nhóm rút mỗi cảnh giữa 1 giây, còn **88 giây**.
+2. Bản đầu **không có tiếng**. Thử lồng tiếng bằng giọng espeak-ng thì nghe rất cứng, nhóm bỏ.
+3. Đổi sang giọng nơ-ron Piper tiếng Việt (`vi_VN-vais1000-medium`, CC BY 4.0). Kiểm tra bằng mô hình nhận dạng giọng nói tiếng Việt thì thấy “Legal AI” bị nghe thành “Liver”, “online” thành “Imland”, chữ cuối câu trước dấu chấm bị nuốt. Nhóm viết lại lời dẫn theo âm Việt (“Lê gồ Ây Ai”, “trên mạng”), thay dấu chấm giữa câu bằng dấu phẩy, đọc chậm lại (length_scale 1,45). Lần kiểm tra sau, máy nghe ra đúng gần hết lời dẫn, kể cả khi có nhạc nền.
+
+**Kết quả:** Video 88 giây đang nhúng ở Mục 3, có lời dẫn, nhạc nền và phụ đề.
 
 ---
 
