@@ -4,7 +4,9 @@
 
 ## URL đồ án
 
-**https://legal-ai-nhom-9.github.io/nhom-9_Legal-AI/** *(bật GitHub Pages: Settings › Pages › Deploy from a branch › `main` / `root`, rồi mở thử bằng cửa sổ ẩn danh)*
+**https://legal-ai-nhom-9.github.io/nhom-9_Legal-AI/**
+
+Đã kiểm tra ngày 18/11/2026 bằng trình duyệt ẩn danh trên máy tính và điện thoại: trang, ảnh và video (88 giây, có tiếng) đều tải bình thường.
 
 Mã nguồn: https://github.com/Legal-AI-Nhom-9/nhom-9_Legal-AI
 

@@ -22,7 +22,7 @@
 | Hình, giọng người thật chưa được phép (−2,0) | Không có hình người; lời dẫn là giọng máy tổng hợp (Piper, dữ liệu VAIS-1000, CC BY 4.0, đã ghi nguồn), không mô phỏng người cụ thể; nhân vật Lan hư cấu, công bố ở cảnh đầu | ☑ |
 | Dữ liệu cá nhân chưa ẩn danh đưa vào AI (−2,0) | Không đưa họ tên, MSSV, hợp đồng thật vào AI | ☑ |
 | Biểu mẫu thu thập dữ liệu thiếu thông báo (−2,0) | Đã kiểm mã trang: **không có thẻ `<form>`**, không có lệnh gửi dữ liệu ra ngoài, không có tập lệnh bên ngoài. Hai ô nhập duy nhất thuộc bảng chỉnh sửa ảnh và video, chỉ hiện ở chế độ `#sua`, không thu thập thông tin | ☑ |
-| Trang web không truy cập được khi chấm (−2,0) | Kiểm tra đường dẫn GitHub Pages bằng cửa sổ ẩn danh **trước và sau khi nộp** | ☐ *(nhóm tự kiểm ngay trước khi nộp)* |
+| Trang web không truy cập được khi chấm (−2,0) | Ngày 18/11/2026 đã mở https://legal-ai-nhom-9.github.io/nhom-9_Legal-AI/ bằng trình duyệt ẩn danh trên máy tính và điện thoại: trang tải đầy đủ, không lỗi; 7/7 ảnh hiện; video 88 giây phát được, có tiếng; đủ 15 thành viên; không cuộn ngang. Nên mở lại một lần ngay sau khi nộp | ☑ |
 | Có yếu tố AI nhưng không gắn nhãn (−1,0) | Nhãn ở chân trang, dưới video, trên infographic và suốt video | ☑ |
 
 ## 3. Câu chữ giới hạn trách nhiệm trên trang
