@@ -299,24 +299,6 @@ details{scroll-margin-top:84px}
 .cd-buoc a{color:var(--cam-soft);text-underline-offset:3px}
 @media(max-width:760px){.cd{grid-template-columns:1fr}.cd-anh{max-width:380px;margin:0 auto}}
 
-/* ═══ Mục 2: bộ nhận diện ═══ */
-.nd-tieude{font-size:1.5rem;font-stretch:84%;margin:clamp(8px,2vh,20px) 0 0}
-.nd{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:18px}
-.nd-o{background:#fff;border:1px solid var(--line-sang);border-radius:10px;padding:20px}
-.nd-o p{margin:.4em 0 0;color:var(--mo-sang);font-size:15px}
-.nd-o .nd-nhan{margin:0 0 12px;color:var(--cam-dark)}
-.nd-logo{display:flex;align-items:center;gap:12px}
-.nd-logo span{font-weight:800;font-stretch:78%;font-size:1.7rem;letter-spacing:.02em;color:var(--ink)}
-.nd-logo b{color:var(--cam);font-weight:800}
-.nd-mau{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-.nd-mau li{display:grid;grid-template-columns:36px 1fr auto;column-gap:10px;align-items:center}
-.nd-mau i{grid-row:span 2;width:36px;height:36px;border-radius:8px}
-.nd-mau b{font-size:15px}
-.nd-mau code{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--mo-sang)}
-.nd-mau span{grid-column:2 / -1;font-size:13.5px;color:var(--mo-sang)}
-.nd-o .nd-font1{font-family:Archivo,sans-serif;font-weight:800;font-stretch:78%;font-size:1.9rem;color:var(--ink);margin:0;line-height:1.1}
-.nd-o .nd-font2{font-family:"IBM Plex Mono",monospace;font-size:1.15rem;color:var(--ink);margin:.9em 0 0}
-
 /* ═══ giảng viên hướng dẫn ═══ */
 .gvhd{border-left:4px solid var(--cam);background:#fff;border-radius:0 10px 10px 0;padding:20px 24px}
 .gvhd p{margin:0}
@@ -488,42 +470,7 @@ body.editing [data-rev]{opacity:1!important;transform:none!important;transition:
     <div class="rows" style="margin-bottom:34px">
       <div class="row" data-rev><b>Thông điệp chính</b><span class="n">Một câu, đọc là nhớ</span><span class="v mono">Hỏi luật dễ như nhắn tin</span></div>
     </div>
-    <h3 class="nd-tieude" data-rev>Bộ nhận diện</h3>
-    <div class="nd">
-      <div class="nd-o" data-rev>
-        <p class="mono nd-nhan">Logo</p>
-        <div class="nd-logo" aria-hidden="true">
-          <svg viewBox="0 0 64 64" width="56" height="56"><rect width="64" height="64" rx="14" fill="#0A1B2B"/><g fill="none" stroke="#F4831F" stroke-width="3" stroke-linecap="round"><path d="M32 14v34M18 20h28M14 44h36"/><path d="M18 20l-7 14h14zM46 20l-7 14h14z"/></g><circle cx="32" cy="14" r="3" fill="#F4831F"/></svg>
-          <span>LEGAL <b>AI</b></span>
-        </div>
-        <p>Cán cân công lý tượng trưng cho pháp luật và sự công bằng; bong bóng hội thoại trên hình chủ đề thể hiện việc hỏi luật như nhắn tin. Chữ <b>AI</b> tô cam để nhấn vào công nghệ.</p>
-      </div>
-      <div class="nd-o" data-rev>
-        <p class="mono nd-nhan">Bảng màu</p>
-        <ul class="nd-mau">
-          <li><i style="background:#0A1B2B"></i><b>Xanh đen</b><code>#0A1B2B</code><span>Nền chính, cảm giác tin cậy</span></li>
-          <li><i style="background:#1A3C6E"></i><b>Xanh dương</b><code>#1A3C6E</code><span>Chuyên nghiệp, đáng tin</span></li>
-          <li><i style="background:#F4831F"></i><b>Cam</b><code>#F4831F</code><span>Điểm nhấn: căn cứ, văn bản gốc</span></li>
-          <li><i style="background:#F7F1E8;box-shadow:inset 0 0 0 1px rgba(43,38,32,.2)"></i><b>Kem</b><code>#F7F1E8</code><span>Màu giấy tờ, dễ đọc lâu</span></li>
-        </ul>
-      </div>
-      <div class="nd-o" data-rev>
-        <p class="mono nd-nhan">Kiểu chữ</p>
-        <p class="nd-font1">Archivo</p>
-        <p>Tiêu đề và nội dung: chữ đậm, gọn, đọc tốt trên điện thoại.</p>
-        <p class="nd-font2">IBM Plex Mono</p>
-        <p>Nhãn, chú thích, số hiệu văn bản: giống chữ trên giấy tờ pháp lý.</p>
-      </div>
-      <div class="nd-o" data-rev>
-        <p class="mono nd-nhan">Giọng điệu</p>
-        <ul class="ds-kh">
-          <li>Gần gũi, ngắn gọn như nhắn tin</li>
-          <li>Luôn kèm tên văn bản, số điều để tự kiểm tra</li>
-          <li>Nói rõ khi nào cần luật sư, không hứa thay luật sư</li>
-        </ul>
-      </div>
-    </div>
-    <div class="grid g2" style="margin-top:clamp(36px,5vh,56px)">
+    <div class="grid g2">
       <figure class="anhkhung" data-rev>
         <img src="imgs/chu-de.svg" alt="Hình minh hoạ nền xanh đậm: cán cân công lý màu cam ở giữa, bong bóng chat ghi “Hỏi luật? Hỏi mình.”, phía dưới là chữ LEGAL AI">
         <figcaption><p>Hình chủ đề</p></figcaption>
