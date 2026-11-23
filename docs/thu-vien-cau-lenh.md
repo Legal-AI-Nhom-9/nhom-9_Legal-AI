@@ -303,7 +303,9 @@ Bước 3 — Với lời dẫn ở bước 2, chia thành 10 cảnh; ghép mỗ
 2. Bản đầu **không có tiếng**. Thử lồng tiếng bằng giọng espeak-ng thì nghe rất cứng, nhóm bỏ.
 3. Đổi sang giọng nơ-ron Piper tiếng Việt (`vi_VN-vais1000-medium`, CC BY 4.0). Kiểm tra bằng mô hình nhận dạng giọng nói tiếng Việt thì thấy “Legal AI” bị nghe thành “Liver”, “online” thành “Imland”, chữ cuối câu trước dấu chấm bị nuốt. Nhóm viết lại lời dẫn theo âm Việt (“Lê gồ Ây Ai”, “trên mạng”), thay dấu chấm giữa câu bằng dấu phẩy, đọc chậm lại (length_scale 1,45). Lần kiểm tra sau, máy nghe ra đúng gần hết lời dẫn, kể cả khi có nhạc nền.
 
-**Kết quả:** Video 88 giây đang nhúng ở Mục 3, có lời dẫn, nhạc nền và phụ đề.
+4. Bản tiếp theo phần lớn là khung chữ và hình giao diện, chưa thấy người hành động theo kịch bản. Nhóm vẽ thêm 5 cảnh có nhân vật (Lan trong phòng trọ, tra mạng, hỏi Legal AI, đọc Điều 328, gặp luật sư) và 2 hình nền phòng xử án, luật sư cho Mục 1–2. Nhân vật vẽ dạng phẳng, hư cấu, không vẽ khuôn mặt, không dùng ảnh người thật (`docs/tao-video/ve_canh.py`). Phụ đề các cảnh 4–7 gắn nhãn “Bước 1–4”.
+
+**Kết quả:** Video 88 giây đang nhúng ở Mục 3, có nhân vật diễn theo kịch bản, lời dẫn, nhạc nền và phụ đề.
 
 ---
 

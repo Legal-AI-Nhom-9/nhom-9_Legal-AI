@@ -3,7 +3,7 @@ const fs=require('fs');
 (async()=>{
  const b=await chromium.launch(); const p=await b.newPage({deviceScaleFactor:1});
  const dir='imgs/', out='build_video/png/'; fs.mkdirSync(out,{recursive:true});
- for (const f of ['hero','frame','iris','chu-de','poster']){
+ for (const f of ['iris','chu-de','poster','cach-dung','canh-1-boi-canh','canh-2-van-de','canh-3-hoi','canh-4-doi-chieu','canh-5-luat-su']){
    const svg=fs.readFileSync(dir+f+'.svg','utf8');
    const m=svg.match(/viewBox="[\d.\s-]*?([\d.]+)\s+([\d.]+)"/); let w=+m[1],h=+m[2]; const s=Math.min(2400/w,2400/h); w=Math.round(w*s);h=Math.round(h*s);
    await p.setViewportSize({width:w,height:h});

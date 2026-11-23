@@ -20,7 +20,7 @@
 | Lỗi bị trừ | Tình trạng | Đã kiểm |
 |---|---|---|
 | Tài liệu tham khảo bịa đặt (−2,0/tài liệu) | 7 nguồn ở mục “Nguồn tham khảo”: 6 văn bản đã đối chiếu ở bảng trên; nguồn thứ 7 là trang vbpl.vn của Bộ Tư pháp | ☑ |
-| Hình, giọng người thật chưa được phép (−2,0) | Không có hình người; lời dẫn là giọng máy tổng hợp (Piper, dữ liệu VAIS-1000, CC BY 4.0, đã ghi nguồn), không mô phỏng người cụ thể; nhân vật Lan hư cấu, công bố ở cảnh đầu | ☑ |
+| Hình, giọng người thật chưa được phép (−2,0) | Không dùng ảnh người thật: các nhân vật (Lan, luật sư, thẩm phán) là hình vẽ phẳng hư cấu, không vẽ khuôn mặt; lời dẫn là giọng máy tổng hợp (Piper, dữ liệu VAIS-1000, CC BY 4.0, đã ghi nguồn), không mô phỏng người cụ thể; nhân vật Lan hư cấu, công bố ở cảnh đầu | ☑ |
 | Dữ liệu cá nhân chưa ẩn danh đưa vào AI (−2,0) | Không đưa họ tên, MSSV, hợp đồng thật vào AI | ☑ |
 | Biểu mẫu thu thập dữ liệu thiếu thông báo (−2,0) | Đã kiểm mã trang: **không có thẻ `<form>`**, không có lệnh gửi dữ liệu ra ngoài, không có tập lệnh bên ngoài. Hai ô nhập duy nhất thuộc bảng chỉnh sửa ảnh và video, chỉ hiện ở chế độ `#sua`, không thu thập thông tin | ☑ |
 | Trang web không truy cập được khi chấm (−2,0) | Ngày 18/11/2026 đã mở https://legal-ai-nhom-9.github.io/nhom-9_Legal-AI/ bằng trình duyệt ẩn danh trên máy tính và điện thoại: trang tải đầy đủ, không lỗi; 7/7 ảnh hiện; video 88 giây phát được, có tiếng; đủ 15 thành viên; không cuộn ngang. Nên mở lại một lần ngay sau khi nộp | ☑ |

@@ -281,6 +281,12 @@ footer{background:var(--navy-deep);padding:clamp(56px,8vh,100px) 0 44px;border-t
 details p a{color:var(--cam-dark);text-underline-offset:3px}
 details{scroll-margin-top:84px}
 
+/* ═══ hình nền Mục 1 (phòng xử án) và Mục 2 (luật sư) ═══ */
+.nen-anh{background-size:cover;background-position:center;background-repeat:no-repeat}
+#ytuong.nen-anh{background-image:linear-gradient(rgba(241,231,216,.86),rgba(241,231,216,.93)),url(imgs/nen-phien-toa.svg)}
+#nhandien.nen-anh{background-image:linear-gradient(rgba(247,241,232,.84),rgba(247,241,232,.92)),url(imgs/nen-luat-su.svg)}
+.nen-anh .col p,.nen-anh .ds-kh{color:rgba(43,38,32,.78)}
+
 /* ═══ Mục 1: khách hàng, cách dùng ═══ */
 .ds-kh{margin:0;padding-left:1.1em;color:var(--mo-sang)}
 .ds-kh li{margin:.35em 0}
@@ -425,7 +431,7 @@ body.editing [data-rev]{opacity:1!important;transform:none!important;transition:
 </section>
 
 <!-- ══════════ MỤC 1 — Ý TƯỞNG KHỞI NGHIỆP ══════════ -->
-<section class="band sang" id="ytuong">
+<section class="band sang nen-anh" id="ytuong">
   <div class="wrap">
     <p class="mono eyebrow" data-rev>Mục 1 · Ý tưởng khởi nghiệp</p>
     <h2 class="dis" data-split>Hiểu luật <em>không còn</em> là việc khó</h2>
@@ -463,7 +469,7 @@ body.editing [data-rev]{opacity:1!important;transform:none!important;transition:
 </section>
 
 <!-- ══════════ MỤC 2 — THÔNG ĐIỆP ══════════ -->
-<section class="band" id="nhandien" style="background:var(--cream);color:var(--ink)">
+<section class="band nen-anh" id="nhandien" style="color:var(--ink)">
   <div class="wrap">
     <p class="mono eyebrow" data-rev>Mục 2 · Thông điệp</p>
     <h2 class="dis" data-split>Thông điệp</h2>

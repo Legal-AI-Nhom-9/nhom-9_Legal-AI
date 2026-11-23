@@ -31,7 +31,7 @@ CANH = [
     (46, 10, "Lan tự đọc Điều ba trăm hai mươi tám, Bộ luật Dân sự, về tiền đặt cọc."),
     (56, 8, "Nếu còn tranh chấp, Lê gồ Ây Ai chỉ Lan tới luật sư, hoặc trợ giúp pháp lý nhà nước."),
     (64, 8, "Thuê nhà trọ, hợp đồng lao động, và mua bán trên mạng."),
-    (72, 8, "Hỏi bằng tiếng Việt, đọc văn bản gốc, và biết khi nào cần luật sư."),
+    (72, 8, "Hỏi Lê gồ Ây Ai, đọc văn bản gốc, và biết khi nào cần luật sư."),
     (80, 8, "Lê gồ Ây Ai, hỏi luật dễ như nhắn tin."),
 ]
 TONG = 88
