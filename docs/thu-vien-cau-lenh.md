@@ -425,6 +425,29 @@ gắn nhãn là Luật Trí tuệ nhân tạo (Luật số 134/2025/QH15).
 
 ---
 
+### 19 · Generate Knowledge + Verification — mục “Thử hỏi LegalAI” và dải số liệu
+
+**Dùng ở:** Mục “Thử hỏi LegalAI”; 4 ô số liệu ở đầu Mục 1
+
+```
+Bước 1 — Với 3 tình huống: (a) chủ trọ giữ tiền cọc sau khi đã trả phòng,
+(b) thử việc 3 tháng, lương 70%, (c) hợp đồng 1 năm muốn nghỉ việc phải báo
+trước bao lâu — hãy nêu điều, khoản luật Việt Nam liên quan kèm số hiệu văn bản.
+Bước 2 — Viết câu trả lời mẫu cho từng tình huống: trả lời thẳng trước, giải
+thích ngắn, mục “Căn cứ”, mục “Bạn nên làm gì” (3 ý), dòng “không thay thế ý
+kiến luật sư”. Chỉ trích nguyên văn khi đã có văn bản gốc; còn lại ghi “tóm tắt”.
+Bước 3 — Đề xuất 4 số liệu chính thức cho thấy (1) hệ thống văn bản pháp luật
+đồ sộ, (2) luật thay đổi liên tục, (3) nhu cầu trợ giúp pháp lý, (4) quy mô
+doanh nghiệp nhỏ và vừa. Mỗi số phải có đường dẫn nguồn cụ thể. Không có
+nguồn thì không đưa.
+```
+
+**Vì sao chọn:** Học theo trang tham khảo của nhóm khác (có mô phỏng tương tác và dải số liệu có nguồn), nhưng không để AI tự đặt số.
+**Tinh chỉnh (đã xảy ra):** Tỷ lệ “tăng 13% so với 2023” đi kèm con số 63.361 bị bỏ vì nguồn không rõ tỷ lệ đó áp cho chỉ tiêu nào; nhận định “phần lớn DNNVV chưa có pháp chế” bị bỏ vì không có số liệu đỡ. Mọi con số được đối chiếu lại (`bang-xac-minh.md`, mục 1b).
+**Kết quả:** 3 tình huống bấm chọn được, 4 ô số liệu kèm nguồn ở Mục 1.
+
+---
+
 ## Tổng hợp kỹ thuật đã dùng
 
 | Kỹ thuật | Câu lệnh | Số câu |
@@ -438,8 +461,8 @@ gắn nhãn là Luật Trí tuệ nhân tạo (Luật số 134/2025/QH15).
 | Video prompting bảy thành phần | 12 | 1 |
 | Role prompting + ràng buộc (nội dung, mã, tuân thủ) | 13, 14, 15, 18 | 4 |
 | Generate Knowledge | 16 | 1 |
-| Verification prompting | 17 | 1 |
-| **Tổng** | | **18 câu lệnh · 10 kỹ thuật** |
+| Verification prompting | 17, 19 | 2 |
+| **Tổng** | | **19 câu lệnh · 10 kỹ thuật** |
 
 ---
 

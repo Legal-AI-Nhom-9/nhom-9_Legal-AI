@@ -287,6 +287,41 @@ details{scroll-margin-top:84px}
 #nhandien.nen-anh{background-image:linear-gradient(rgba(247,241,232,.84),rgba(247,241,232,.92)),url(imgs/nen-luat-su.svg)}
 .nen-anh .col p,.nen-anh .ds-kh{color:rgba(43,38,32,.78)}
 
+/* ═══ dải số liệu ═══ */
+.so-lieu{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:clamp(24px,4vh,40px)}
+.sl{background:rgba(255,255,255,.82);border:1px solid var(--line-sang);border-top:4px solid var(--cam);border-radius:10px;padding:18px 18px 14px}
+.sl p{margin:0}
+.sl-so{font-weight:800;font-stretch:72%;font-size:clamp(2.1rem,3.6vw,2.8rem);line-height:1;color:var(--cam-dark)}
+.sl-nd{margin-top:8px!important;font-size:14.5px;color:var(--ink)}
+.sl-nguon{margin-top:10px!important;font-size:12.5px;color:var(--mo-sang)}
+.sl-nguon a{color:var(--cam-dark);text-underline-offset:3px}
+
+/* ═══ thử hỏi Legal AI ═══ */
+.th{display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:clamp(18px,3vw,36px);margin-top:clamp(24px,4vh,40px);align-items:start}
+.th-ds{display:grid;gap:10px}
+.th-nut{text-align:left;font:600 16px/1.35 Archivo,"Segoe UI",sans-serif;color:var(--ink);background:#fff;border:2px solid var(--line-sang);border-radius:12px;padding:14px 16px;cursor:pointer;min-height:44px}
+.th-nut .mono{display:block;color:var(--cam-dark);margin-bottom:4px;font-size:10.5px}
+.th-nut:hover{border-color:var(--cam-soft)}
+.th-nut[aria-selected="true"]{border-color:var(--cam);background:var(--navy);color:var(--cream)}
+.th-nut[aria-selected="true"] .mono{color:var(--cam-soft)}
+.th-nut:focus-visible{outline:3px solid var(--cam);outline-offset:2px}
+.th-man{background:var(--cream);border:1px solid var(--line-sang);border-radius:16px;padding:clamp(16px,2.4vw,26px)}
+.th-khung p{margin:0}
+.th-hoi{margin-left:auto!important;max-width:80%;background:#1A3C6E;color:var(--cream);border-radius:18px 18px 4px 18px;padding:12px 16px;width:fit-content}
+.th-dap{margin-top:14px;background:#fff;border:1px solid var(--line-sang);border-radius:18px 18px 18px 4px;padding:16px 18px;max-width:92%}
+.th-dap>p,.th-dap li{font-size:15.5px;color:var(--ink)}
+.th-nhan{color:var(--cam-dark)!important;font-size:10.5px!important;margin:14px 0 6px!important}
+.th-dap>.th-nhan:first-child{margin-top:0!important}
+.th-cancu{margin-top:14px;border-left:4px solid var(--cam);background:rgba(244,131,31,.08);border-radius:0 10px 10px 0;padding:10px 14px}
+.th-cancu .th-nhan{margin-top:0!important}
+.th-cancu p{font-size:14.5px;margin-top:4px!important}
+.th-trich{font-style:italic;color:var(--mo-sang)}
+.th-cancu a{color:var(--cam-dark);text-underline-offset:3px;font-weight:600}
+.th-dap ul{margin:0;padding-left:1.2em}
+.th-dap li{margin:.25em 0}
+.th-luuy{margin-top:12px!important;font-size:13px!important;color:var(--mo-sang)!important}
+@media(max-width:760px){.th{grid-template-columns:1fr}.th-hoi,.th-dap{max-width:100%}}
+
 /* ═══ Mục 1: khách hàng, cách dùng ═══ */
 .ds-kh{margin:0;padding-left:1.1em;color:var(--mo-sang)}
 .ds-kh li{margin:.35em 0}
@@ -406,6 +441,7 @@ body.editing [data-rev]{opacity:1!important;transform:none!important;transition:
   <b>LEGAL AI</b>
   <a class="an" href="#ytuong">Ý tưởng</a>
   <a class="an" href="#nhandien">Thông điệp</a>
+  <a class="an" href="#thu">Thử hỏi</a>
   <a class="an" href="#video">Video</a>
   <a href="#nhom">Nhóm</a>
 </nav>
@@ -435,6 +471,12 @@ body.editing [data-rev]{opacity:1!important;transform:none!important;transition:
   <div class="wrap">
     <p class="mono eyebrow" data-rev>Mục 1 · Ý tưởng khởi nghiệp</p>
     <h2 class="dis" data-split>Hiểu luật <em>không còn</em> là việc khó</h2>
+    <div class="so-lieu">
+      <div class="sl" data-rev><p class="sl-so">45.792</p><p class="sl-nd">văn bản quy phạm pháp luật còn hiệu lực hoặc chưa có hiệu lực, từ Trung ương đến địa phương, được xác định trong đợt tổng rà soát (tính đến 30/6/2026).</p><p class="sl-nguon">Nguồn: <a href="https://moj.gov.vn/portal/tin-tuc/chi-tiet/tong-ra-soat-he-thong-van-ban-quy-pham-phap-luat-nhan-dien-ro-nhung-iem-nghen-e-tap-trung-xu-ly-tjwvm0f12d.html" target="_blank" rel="noopener">Bộ Tư pháp ↗</a></p></div>
+      <div class="sl" data-rev><p class="sl-so">gần 13.000</p><p class="sl-nd">văn bản được xác định cần tiếp tục nghiên cứu xử lý (sửa đổi, bổ sung, thay thế, bãi bỏ): luật thay đổi liên tục, người dân khó tự theo kịp.</p><p class="sl-nguon">Nguồn: <a href="https://moj.gov.vn/portal/tin-tuc/chi-tiet/so-bo-tong-ra-soat-hon-43000-van-ban-quy-pham-phap-luat-buoc-au-e-xuat-phuong-an-xu-ly-tj172vdebe.html" target="_blank" rel="noopener">Bộ Tư pháp, 30/7/2026 ↗</a></p></div>
+      <div class="sl" data-rev><p class="sl-so">63.361</p><p class="sl-nd">vụ việc trợ giúp pháp lý được thực hiện trên cả nước trong năm 2024: nhu cầu được hỗ trợ pháp lý là rất lớn.</p><p class="sl-nguon">Nguồn: <a href="https://danchuphapluat.vn/thao-go-kho-khan-thuc-hien-co-hieu-qua-noi-dung-tro-giup-phap-ly-trong-chuong-trinh-muc-tieu-quoc-gia-7535.html" target="_blank" rel="noopener">Tạp chí Dân chủ và Pháp luật (Bộ Tư pháp) ↗</a></p></div>
+      <div class="sl" data-rev><p class="sl-so">97,24%</p><p class="sl-nd">doanh nghiệp có kết quả sản xuất kinh doanh là doanh nghiệp nhỏ và vừa (tại 31/12/2022): nhóm khách hàng mục tiêu của LegalAI.</p><p class="sl-nguon">Nguồn: <a href="https://tapchitckt.hvtc.edu.vn/DesktopModules/SubPortal/TapChiNCTCKT/Service/TraVeFilePDF.aspx?ID=1974" target="_blank" rel="noopener">Sách trắng Doanh nghiệp Việt Nam 2024, dẫn theo Tạp chí NC Tài chính Kế toán ↗</a></p></div>
+    </div>
     <div class="grid g3">
       <div class="col" data-rev><div class="num">01</div><h3>Vấn đề thực tiễn</h3>
         <p>Hệ thống văn bản quy phạm pháp luật tại Việt Nam vô cùng đồ sộ, phức tạp và thường xuyên được cập nhật, bổ sung. Đối với các nhà sáng lập khởi nghiệp (startup), tiểu thương hay người dân bình thường, việc tra cứu một điều luật, hiểu đúng các điều khoản hợp đồng hay thực hiện thủ tục hành chính gặp rất nhiều khó khăn. Ngôn ngữ pháp lý khô khan cùng sự thiếu hụt kiến thức chuyên môn khiến họ dễ gặp rủi ro pháp lý hoặc tốn kém chi phí thuê tư vấn đắt đỏ.</p></div>
@@ -464,6 +506,56 @@ body.editing [data-rev]{opacity:1!important;transform:none!important;transition:
         <li data-rev><b>Đối chiếu văn bản gốc</b><span>Mỗi câu trả lời ghi rõ tên văn bản, số điều và liên kết tới văn bản gốc của Nhà nước để tự kiểm tra. <a href="#hoi-coc">Xem câu trả lời mẫu đầy đủ</a>.</span></li>
         <li data-rev><b>Biết khi nào cần luật sư</b><span>Nếu vụ việc đang tranh chấp hoặc phức tạp, LegalAI nói rõ và gợi ý gặp luật sư hoặc Trung tâm trợ giúp pháp lý nhà nước.</span></li>
       </ol>
+    </div>
+  </div>
+</section>
+
+<section class="band sang" id="thu" style="background:var(--sand-2)">
+  <div class="wrap">
+    <p class="mono eyebrow" data-rev>Trải nghiệm · Thử hỏi LegalAI</p>
+    <h2 class="dis" data-split>Thử một câu hỏi <em>thật</em></h2>
+    <p class="lede" data-split>Chọn một tình huống để xem LegalAI trả lời thế nào. Đây là mô phỏng: câu trả lời do nhóm soạn sẵn và đã đối chiếu điều luật, trang không gửi hay lưu bất kỳ thông tin nào.</p>
+    <div class="th" data-rev>
+      <div class="th-ds" role="tablist" aria-label="Tình huống mẫu">
+        <button type="button" class="th-nut" role="tab" id="tab-coc" aria-controls="tl-coc" aria-selected="true"><span class="mono">Thuê trọ</span>Chủ trọ giữ tiền cọc</button>
+        <button type="button" class="th-nut" role="tab" id="tab-thuviec" aria-controls="tl-thuviec" aria-selected="false"><span class="mono">Lao động</span>Thử việc 3 tháng, lương 70%</button>
+        <button type="button" class="th-nut" role="tab" id="tab-nghiviec" aria-controls="tl-nghiviec" aria-selected="false"><span class="mono">Lao động</span>Nghỉ việc phải báo trước bao lâu?</button>
+      </div>
+      <div class="th-man">
+        <div class="th-khung" role="tabpanel" id="tl-coc" aria-labelledby="tab-coc">
+          <p class="th-hoi">Mình đã trả phòng, báo trước 30 ngày mà chủ trọ vẫn giữ tiền cọc. Vậy có đúng không?</p>
+          <div class="th-dap">
+            <p class="mono th-nhan">Legal AI trả lời</p>
+            <p><b>Chưa chắc là đúng.</b> Nếu bạn đã thực hiện đúng hợp đồng thuê, chủ trọ phải trả lại tiền cọc hoặc trừ vào khoản bạn còn nợ (tiền phòng, điện nước). Chủ trọ chỉ được giữ cọc khi bạn là bên không thực hiện hợp đồng, hoặc khi hợp đồng có thoả thuận khác.</p>
+            <div class="th-cancu"><p class="mono th-nhan">Căn cứ</p><p><b>Khoản 2 Điều 328 Bộ luật Dân sự 2015 (Luật số 91/2015/QH13)</b></p><p class="th-trich">“Trường hợp hợp đồng được giao kết, thực hiện thì tài sản đặt cọc được trả lại cho bên đặt cọc hoặc được trừ để thực hiện nghĩa vụ trả tiền; nếu bên đặt cọc từ chối việc giao kết, thực hiện hợp đồng thì tài sản đặt cọc thuộc về bên nhận đặt cọc…”</p><p><a href="https://vbpl.vn/TW/Pages/vbpq-toanvan.aspx?ItemID=95942" target="_blank" rel="noopener">Đọc toàn văn Bộ luật Dân sự 2015 trên vbpl.vn (tìm Điều 328) ↗</a></p></div>
+            <p class="mono th-nhan">Bạn nên làm gì</p>
+            <ul><li>Đọc lại điều khoản tiền cọc và trả phòng trong hợp đồng.</li><li>Giữ lại tin nhắn, giấy tờ chứng minh đã báo trước.</li><li>Đề nghị chủ trọ trả cọc bằng văn bản; còn tranh chấp thì hỏi luật sư hoặc Trung tâm trợ giúp pháp lý nhà nước.</li></ul>
+            <p class="th-luuy">Thông tin tham khảo, không thay thế ý kiến luật sư.</p>
+          </div>
+        </div>
+        <div class="th-khung" role="tabpanel" id="tl-thuviec" aria-labelledby="tab-thuviec" hidden>
+          <p class="th-hoi">Công ty bảo mình thử việc 3 tháng, lương thử việc bằng 70% lương chính thức. Như vậy có đúng luật không?</p>
+          <div class="th-dap">
+            <p class="mono th-nhan">Legal AI trả lời</p>
+            <p><b>Có hai điểm chưa đúng.</b> Lương thử việc do hai bên thoả thuận nhưng <b>ít nhất bằng 85%</b> mức lương của công việc đó, nên 70% là thấp hơn mức luật cho phép. Thời gian thử việc tối đa tuỳ công việc: không quá 180 ngày với người quản lý doanh nghiệp; không quá 60 ngày với công việc cần trình độ cao đẳng trở lên; không quá 30 ngày với trình độ trung cấp, công nhân kỹ thuật, nhân viên nghiệp vụ; không quá 6 ngày làm việc với công việc khác. Vì vậy, trừ vị trí quản lý doanh nghiệp, thử việc 3 tháng là quá dài. Mỗi công việc chỉ được thử việc một lần.</p>
+            <div class="th-cancu"><p class="mono th-nhan">Căn cứ</p><p><b>Điều 25 (thời gian thử việc) và Điều 26 (tiền lương thử việc) Bộ luật Lao động 2019 (Luật số 45/2019/QH14)</b></p><p class="th-trich">Tóm tắt nội dung điều luật, không phải trích nguyên văn.</p><p><a href="https://thuvienphapluat.vn/van-ban/Lao-dong-Tien-luong/Bo-Luat-lao-dong-2019-333670.aspx" target="_blank" rel="noopener">Đọc toàn văn Bộ luật Lao động 2019 (tìm Điều 25, 26) ↗</a></p></div>
+            <p class="mono th-nhan">Bạn nên làm gì</p>
+            <ul><li>Xem lại hợp đồng thử việc: thời gian và mức lương ghi bao nhiêu.</li><li>Đối chiếu với vị trí của bạn thuộc nhóm nào trong 4 mức thời gian.</li><li>Trao đổi lại với bộ phận nhân sự; nếu không được giải quyết, hỏi công đoàn hoặc luật sư.</li></ul>
+            <p class="th-luuy">Thông tin tham khảo, không thay thế ý kiến luật sư.</p>
+          </div>
+        </div>
+        <div class="th-khung" role="tabpanel" id="tl-nghiviec" aria-labelledby="tab-nghiviec" hidden>
+          <p class="th-hoi">Mình ký hợp đồng lao động 1 năm, giờ muốn nghỉ việc thì phải báo trước bao lâu?</p>
+          <div class="th-dap">
+            <p class="mono th-nhan">Legal AI trả lời</p>
+            <p><b>Ít nhất 30 ngày.</b> Thời hạn báo trước khi người lao động đơn phương chấm dứt hợp đồng tuỳ loại hợp đồng: ít nhất 45 ngày với hợp đồng không xác định thời hạn; <b>ít nhất 30 ngày</b> với hợp đồng xác định thời hạn từ 12 đến 36 tháng (trường hợp của bạn); ít nhất 3 ngày làm việc với hợp đồng dưới 12 tháng. Một số ngành, nghề đặc thù theo quy định riêng của Chính phủ. Luật cũng liệt kê một số trường hợp được nghỉ mà không cần báo trước.</p>
+            <div class="th-cancu"><p class="mono th-nhan">Căn cứ</p><p><b>Khoản 1 Điều 35 Bộ luật Lao động 2019 (Luật số 45/2019/QH14); các trường hợp không cần báo trước: khoản 2 Điều 35</b></p><p class="th-trich">Tóm tắt nội dung điều luật, không phải trích nguyên văn.</p><p><a href="https://thuvienphapluat.vn/van-ban/Lao-dong-Tien-luong/Bo-Luat-lao-dong-2019-333670.aspx" target="_blank" rel="noopener">Đọc toàn văn Bộ luật Lao động 2019 (tìm Điều 35) ↗</a></p></div>
+            <p class="mono th-nhan">Bạn nên làm gì</p>
+            <ul><li>Báo nghỉ bằng văn bản hoặc email, ghi rõ ngày báo.</li><li>Tính đủ số ngày báo trước theo loại hợp đồng.</li><li>Báo thiếu ngày có thể bị xem là nghỉ trái luật; nếu chưa chắc, hỏi luật sư.</li></ul>
+            <p class="th-luuy">Thông tin tham khảo, không thay thế ý kiến luật sư.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -536,7 +628,7 @@ body.editing [data-rev]{opacity:1!important;transform:none!important;transition:
             </tbody>
           </table>
           <ul>
-            <li>Xây dựng ý tưởng: vấn đề thực tiễn, giải pháp, khách hàng mục tiêu; viết Mục 1, phần mở đầu và 4 bước dùng LegalAI</li>
+            <li>Xây dựng ý tưởng: vấn đề thực tiễn, giải pháp, khách hàng mục tiêu; viết Mục 1, phần mở đầu, 4 bước dùng LegalAI, dải số liệu có nguồn và mục Thử hỏi LegalAI</li>
             <li>Soạn Câu hỏi thường gặp và các lưu ý “không thay luật sư”, “không phải tư vấn pháp lý”</li>
             <li>Viết mã HTML, CSS, JavaScript: hiệu ứng cuộn, chế độ chỉnh sửa <code>#sua</code>, hiển thị tốt trên điện thoại</li>
             <li>Quản lý kho GitHub, đăng trang lên GitHub Pages; lập Readme.md và đóng tệp zip nộp bài</li>
@@ -653,11 +745,14 @@ body.editing [data-rev]{opacity:1!important;transform:none!important;transition:
     <h2 class="dis" data-split>Căn cứ <em>nêu trên trang</em></h2>
     <ol class="nguon">
       <li data-rev>Quốc hội (2015). <b>Bộ luật Dân sự</b>, Luật số 91/2015/QH13 — Điều 328 (đặt cọc). <a href="https://vbpl.vn/TW/Pages/vbpq-toanvan.aspx?ItemID=95942" target="_blank" rel="noopener">Toàn văn trên vbpl.vn ↗</a></li>
-      <li data-rev>Quốc hội (2019). <b>Bộ luật Lao động</b>, Luật số 45/2019/QH14 — quy định về hợp đồng lao động và thử việc.</li>
+      <li data-rev>Quốc hội (2019). <b>Bộ luật Lao động</b>, Luật số 45/2019/QH14 — Điều 25, 26 (thử việc), Điều 35 (báo trước khi nghỉ việc). <a href="https://thuvienphapluat.vn/van-ban/Lao-dong-Tien-luong/Bo-Luat-lao-dong-2019-333670.aspx" target="_blank" rel="noopener">Toàn văn ↗</a></li>
       <li data-rev>Quốc hội (2023). <b>Luật Bảo vệ quyền lợi người tiêu dùng</b>, Luật số 19/2023/QH15 — quyền của người mua khi mua bán trực tuyến.</li>
       <li data-rev>Quốc hội (2017). <b>Luật Trợ giúp pháp lý</b>, Luật số 11/2017/QH14 — Trung tâm trợ giúp pháp lý nhà nước.</li>
       <li data-rev>Quốc hội (2025). <b>Luật Bảo vệ dữ liệu cá nhân</b>, Luật số 91/2025/QH15, hiệu lực từ 01/01/2026.</li>
       <li data-rev>Quốc hội (2025). <b>Luật Trí tuệ nhân tạo</b>, Luật số 134/2025/QH15, thông qua ngày 10/12/2025, hiệu lực từ 01/3/2026.</li>
+      <li data-rev>Bộ Tư pháp (2026). <b>Tổng rà soát hệ thống văn bản quy phạm pháp luật</b> — số văn bản thuộc phạm vi rà soát và số văn bản cần xử lý. <a href="https://moj.gov.vn/portal/tin-tuc/chi-tiet/tong-ra-soat-he-thong-van-ban-quy-pham-phap-luat-nhan-dien-ro-nhung-iem-nghen-e-tap-trung-xu-ly-tjwvm0f12d.html" target="_blank" rel="noopener">moj.gov.vn ↗</a></li>
+      <li data-rev>Tạp chí Dân chủ và Pháp luật (Bộ Tư pháp). <b>Tháo gỡ khó khăn thực hiện nội dung trợ giúp pháp lý trong Chương trình mục tiêu quốc gia</b> — số vụ việc trợ giúp pháp lý năm 2024. <a href="https://danchuphapluat.vn/thao-go-kho-khan-thuc-hien-co-hieu-qua-noi-dung-tro-giup-phap-ly-trong-chuong-trinh-muc-tieu-quoc-gia-7535.html" target="_blank" rel="noopener">danchuphapluat.vn ↗</a></li>
+      <li data-rev>Bộ Kế hoạch và Đầu tư, Tổng cục Thống kê. <b>Sách trắng Doanh nghiệp Việt Nam 2024</b> — tỷ lệ doanh nghiệp nhỏ và vừa, dẫn theo Tạp chí Nghiên cứu Tài chính Kế toán. <a href="https://tapchitckt.hvtc.edu.vn/DesktopModules/SubPortal/TapChiNCTCKT/Service/TraVeFilePDF.aspx?ID=1974" target="_blank" rel="noopener">tapchitckt.hvtc.edu.vn ↗</a></li>
       <li data-rev>Bộ Tư pháp. <b>Cơ sở dữ liệu quốc gia về văn bản pháp luật</b>: <a href="https://vbpl.vn" target="_blank" rel="noopener">vbpl.vn</a> — nơi tra văn bản gốc và tình trạng hiệu lực.</li>
     </ol>
   </div>
@@ -749,6 +844,29 @@ body.editing [data-rev]{opacity:1!important;transform:none!important;transition:
       if (!im.naturalWidth) console.warn("Ảnh không tải được:", im.getAttribute("src"));
     });
   });
+
+  /* ── thử hỏi Legal AI: chuyển tình huống ── */
+  var nutTH = Array.prototype.slice.call(document.querySelectorAll(".th-nut"));
+  function chonTH(n){
+    nutTH.forEach(function(b){
+      var on = b === n;
+      b.setAttribute("aria-selected", on ? "true" : "false");
+      b.tabIndex = on ? 0 : -1;
+      var k = document.getElementById(b.getAttribute("aria-controls"));
+      if (k) k.hidden = !on;
+    });
+  }
+  nutTH.forEach(function(b, i){
+    b.tabIndex = i === 0 ? 0 : -1;
+    b.addEventListener("click", function(){ chonTH(b); });
+    b.addEventListener("keydown", function(e){
+      var d = e.key === "ArrowDown" || e.key === "ArrowRight" ? 1 : e.key === "ArrowUp" || e.key === "ArrowLeft" ? -1 : 0;
+      if (!d) return;
+      e.preventDefault();
+      var m = nutTH[(i + d + nutTH.length) % nutTH.length]; chonTH(m); m.focus();
+    });
+  });
+  if (nutTH.length) chonTH(nutTH[0]);
 
   /* ── bấm liên kết tới một câu hỏi thường gặp thì tự mở câu đó ── */
   function moTheoDiaChi(){
