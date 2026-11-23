@@ -36,7 +36,7 @@ Nhóm 9 · 15 thành viên · mọi thành viên nhận cùng điểm nhóm.
 
 | Phần | Nội dung | Công việc đã làm cho trang web | Người phụ trách |
 |---|---|---|---|
-| 01 | Ý tưởng, nội dung, lập trình và hồ sơ nộp | Xác định vấn đề, giải pháp, khách hàng (thuê trọ, lao động, mua bán online); viết Mục 1 và phần mở đầu; soạn Câu hỏi thường gặp và các lưu ý giới hạn trách nhiệm; viết mã HTML/CSS/JS, chế độ chỉnh sửa, hiển thị điện thoại; quản lý kho GitHub, GitHub Pages; Readme và tệp zip | Nguyễn Thuỳ Ánh Dương, Trần Trung Kiên, Nguyễn Sỹ Khiêm |
+| 01 | Ý tưởng, nội dung, lập trình và hồ sơ nộp | Xây dựng ý tưởng (vấn đề thực tiễn, giải pháp, khách hàng mục tiêu); viết Mục 1, phần mở đầu và 4 bước dùng LegalAI; soạn Câu hỏi thường gặp và các lưu ý giới hạn trách nhiệm; viết mã HTML/CSS/JS, chế độ chỉnh sửa, hiển thị điện thoại; quản lý kho GitHub, GitHub Pages; Readme và tệp zip | Nguyễn Thuỳ Ánh Dương, Trần Trung Kiên, Nguyễn Sỹ Khiêm |
 | 02 | Thông điệp và bộ nhận diện | Chọn thông điệp “Hỏi luật dễ như nhắn tin”, biểu tượng, bảng màu, font; dựng hình chủ đề, infographic, hình minh hoạ | Lê Minh An, Hồ Thị Hằng, Đỗ Thị Phương Hoài |
 | 03 | Kịch bản và dựng video | Kịch bản 10 cảnh, 88 giây, nhân vật hư cấu; dựng video có lời dẫn (giọng tổng hợp), nhạc nền tự tạo, phụ đề tiếng Việt, nhãn AI suốt video | Nguyễn Huỳnh Thanh Hoàng, Lưu Chấn Huy, Võ Văn Luân |
 | 04 | Kiểm chứng pháp lý và đạo đức | Đối chiếu căn cứ với văn bản gốc; kiểm tra 7 nguồn tham khảo; rà nhãn AI và dữ liệu cá nhân (`docs/bang-xac-minh.md`) | Lê Thị Hoài Thanh, Lê Viết Thành, Nguyễn Phát Thịnh |

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 940" font-family="Segoe UI,Arial,sans-serif">
+  <!-- điện thoại minh hoạ cách dùng Legal AI, đánh số 1–4 theo các bước trên trang -->
+  <g transform="translate(50 20)">
+    <rect x="0" y="0" width="480" height="900" rx="56" fill="#0A1B2B" stroke="#1A3C6E" stroke-width="4"/>
+    <rect x="22" y="22" width="436" height="856" rx="40" fill="#F7F1E8"/>
+    <rect x="22" y="22" width="436" height="96" rx="40" fill="#12293F"/>
+    <rect x="22" y="80" width="436" height="38" fill="#12293F"/>
+    <circle cx="80" cy="76" r="22" fill="#F4831F"/>
+    <text x="80" y="84" font-size="22" font-weight="700" fill="#0A1B2B" text-anchor="middle">L</text>
+    <text x="116" y="70" font-size="22" font-weight="700" fill="#F7F1E8">Legal AI</text>
+    <text x="116" y="96" font-size="16" fill="#F7F1E8" opacity=".7">Trợ lý pháp lý · giao diện minh hoạ</text>
+
+    <!-- 1. câu hỏi -->
+    <rect x="120" y="144" width="314" height="132" rx="22" fill="#1A3C6E"/>
+    <text font-size="19" fill="#F7F1E8"><tspan x="142" y="180">Mình đã trả phòng, báo trước</tspan><tspan x="142" y="208">30 ngày mà chủ trọ vẫn giữ</tspan><tspan x="142" y="236">tiền cọc. Vậy có đúng không?</tspan></text>
+
+    <!-- 2. câu trả lời tóm tắt -->
+    <rect x="46" y="300" width="388" height="186" rx="22" fill="#fff" stroke="#E5D9C6" stroke-width="2"/>
+    <text font-size="18" fill="#2B2620"><tspan x="68" y="338" font-weight="700">Chưa chắc là đúng.</tspan><tspan x="68" y="366">Nếu bạn đã thực hiện đúng hợp đồng,</tspan><tspan x="68" y="392">chủ trọ phải trả lại cọc hoặc trừ</tspan><tspan x="68" y="418">vào khoản bạn còn nợ (tiền phòng,</tspan><tspan x="68" y="444">điện nước). Hãy xem lại điều khoản</tspan><tspan x="68" y="470">tiền cọc trong hợp đồng của bạn.</tspan></text>
+
+    <!-- 3. văn bản gốc -->
+    <rect x="46" y="502" width="388" height="48" rx="12" fill="#F4831F" fill-opacity=".15" stroke="#F4831F" stroke-width="2"/>
+    <text x="66" y="533" font-size="17" fill="#C4640D" font-weight="700">Điều 328 · Bộ luật Dân sự 2015 ↗</text>
+    <rect x="46" y="560" width="388" height="48" rx="12" fill="#F4831F" fill-opacity=".15" stroke="#F4831F" stroke-width="2"/>
+    <text x="66" y="591" font-size="17" fill="#C4640D" font-weight="700">Đọc toàn văn trên vbpl.vn ↗</text>
+
+    <!-- 4. khi cần luật sư -->
+    <rect x="46" y="630" width="388" height="96" rx="18" fill="#12293F"/>
+    <text font-size="17" fill="#F7F1E8"><tspan x="68" y="668">Vẫn còn tranh chấp với chủ trọ?</tspan><tspan x="68" y="696" fill="#F8A85F">Gặp luật sư hoặc trợ giúp pháp lý →</tspan></text>
+
+    <rect x="46" y="800" width="388" height="56" rx="28" fill="#fff" stroke="#E5D9C6" stroke-width="2"/>
+    <text x="74" y="835" font-size="18" fill="#2B2620" opacity=".5">Hỏi bằng tiếng Việt đời thường…</text>
+  </g>
+
+  <!-- số thứ tự các bước -->
+  <g font-size="24" font-weight="800" text-anchor="middle" fill="#0A1B2B">
+    <circle cx="30" cy="230" r="24" fill="#F4831F" stroke="#F7F1E8" stroke-width="4"/><text x="30" y="239">1</text>
+    <circle cx="30" cy="413" r="24" fill="#F4831F" stroke="#F7F1E8" stroke-width="4"/><text x="30" y="422">2</text>
+    <circle cx="30" cy="575" r="24" fill="#F4831F" stroke="#F7F1E8" stroke-width="4"/><text x="30" y="584">3</text>
+    <circle cx="30" cy="698" r="24" fill="#F4831F" stroke="#F7F1E8" stroke-width="4"/><text x="30" y="707">4</text>
+  </g>
+</svg>

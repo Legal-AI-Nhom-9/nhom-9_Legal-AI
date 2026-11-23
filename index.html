@@ -281,13 +281,36 @@ footer{background:var(--navy-deep);padding:clamp(56px,8vh,100px) 0 44px;border-t
 details p a{color:var(--cam-dark);text-underline-offset:3px}
 details{scroll-margin-top:84px}
 
+/* ═══ Mục 1: khách hàng, cách dùng ═══ */
+.ds-kh{margin:0;padding-left:1.1em;color:var(--mo-sang)}
+.ds-kh li{margin:.35em 0}
+.ds-kh li::marker{color:var(--cam-dark)}
+.cd{display:grid;grid-template-columns:minmax(260px,400px) 1fr;gap:clamp(28px,5vw,64px);align-items:center;margin-top:clamp(28px,4vh,48px)}
+.cd-anh{margin:0}
+.cd-anh img{width:100%;height:auto}
+.cd-anh figcaption{margin-top:10px;text-align:center}
+.cd-buoc{list-style:none;margin:0;padding:0;counter-reset:b}
+.cd-buoc li{counter-increment:b;position:relative;padding:16px 0 16px 58px;border-top:1px solid var(--line-toi)}
+.cd-buoc li:last-child{border-bottom:1px solid var(--line-toi)}
+.cd-buoc li::before{content:counter(b);position:absolute;left:0;top:14px;width:38px;height:38px;border-radius:50%;
+  background:var(--cam);color:var(--navy-deep);font-weight:800;display:grid;place-items:center;font-size:18px}
+.cd-buoc b{display:block;font-size:1.12rem;font-stretch:84%;margin-bottom:4px;color:var(--cream)}
+.cd-buoc span{color:var(--mo-toi)}
+.cd-buoc a{color:var(--cam-soft);text-underline-offset:3px}
+@media(max-width:760px){.cd{grid-template-columns:1fr}.cd-anh{max-width:380px;margin:0 auto}}
+
 /* ═══ thẻ thành viên ═══ */
 .team{display:grid;margin-top:clamp(28px,4vh,54px)}
 .tv{display:grid;grid-template-columns:auto 1fr;gap:6px clamp(18px,3vw,40px);padding:26px 0;border-top:1px solid var(--line-sang)}
 .tv:last-child{border-bottom:1px solid var(--line-sang)}
 .tv-so{font-weight:800;font-stretch:70%;font-size:2.4rem;line-height:1;color:var(--cam)}
 .tv h3{margin:0 0 .4em;font-size:1.2rem;font-stretch:84%}
-.tv-ten{margin:0 0 .2em;font-size:15.5px;font-weight:600;color:var(--ink)}
+.tv-bang{width:100%;max-width:560px;border-collapse:collapse;margin:.3em 0 .2em;font-size:15px}
+.tv-bang th{text-align:left;font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--mo-sang);padding:4px 12px 6px 0;border-bottom:1px solid var(--line-sang)}
+.tv-bang td{padding:7px 12px 7px 0;border-bottom:1px solid var(--line-sang);color:var(--ink);vertical-align:top}
+.tv-bang td:first-child{font-weight:600;width:52%}
+.tv-bang td:nth-child(2),.tv-bang td:nth-child(3){font-variant-numeric:tabular-nums;white-space:nowrap}
+@media(max-width:420px){.tv-bang{font-size:14px}.tv-bang td,.tv-bang th{padding-right:8px}}
 .tv ul{margin:.6em 0 0;padding-left:1.1em;color:var(--mo-sang)}
 .tv li{margin:.2em 0}
 .tv li::marker{color:var(--cam-dark)}
@@ -395,29 +418,39 @@ body.editing [data-rev]{opacity:1!important;transform:none!important;transition:
 </section>
 
 <!-- ══════════ MỤC 1 — Ý TƯỞNG KHỞI NGHIỆP ══════════ -->
-<section class="stage toi" id="s2">
-  <div class="pin">
-    <div class="anh"><img src="imgs/frame.svg" alt="Hình minh hoạ điện thoại mở ứng dụng Legal AI: câu hỏi về việc bị giữ tiền cọc, câu trả lời kèm hai nút dẫn tới văn bản gốc, và lời nhắc gặp luật sư khi đang có tranh chấp"></div>
-    <div class="so">01</div>
-    <div class="cap">
-      <p class="mono">Mục 1 · Ý tưởng khởi nghiệp</p>
-      <h2 class="dis" data-split>Hỏi luật bằng <em>tiếng Việt</em> đời thường</h2>
-      <p data-split>Mỗi câu trả lời kèm tên văn bản, số điều và đường dẫn tới văn bản gốc, để bạn tự kiểm tra chứ không phải tin suông.</p>
+<section class="band sang" id="ytuong">
+  <div class="wrap">
+    <p class="mono eyebrow" data-rev>Mục 1 · Ý tưởng khởi nghiệp</p>
+    <h2 class="dis" data-split>Hiểu luật <em>không còn</em> là việc khó</h2>
+    <div class="grid g3">
+      <div class="col" data-rev><div class="num">01</div><h3>Vấn đề thực tiễn</h3>
+        <p>Hệ thống văn bản quy phạm pháp luật tại Việt Nam vô cùng đồ sộ, phức tạp và thường xuyên được cập nhật, bổ sung. Đối với các nhà sáng lập khởi nghiệp (startup), tiểu thương hay người dân bình thường, việc tra cứu một điều luật, hiểu đúng các điều khoản hợp đồng hay thực hiện thủ tục hành chính gặp rất nhiều khó khăn. Ngôn ngữ pháp lý khô khan cùng sự thiếu hụt kiến thức chuyên môn khiến họ dễ gặp rủi ro pháp lý hoặc tốn kém chi phí thuê tư vấn đắt đỏ.</p></div>
+      <div class="col" data-rev><div class="num">02</div><h3>Giải pháp của LegalAI</h3>
+        <p>LegalAI ra đời như một “Trợ lý Pháp lý Thông minh 24/7”, ứng dụng công nghệ xử lý ngôn ngữ tự nhiên (NLP) và Trí tuệ nhân tạo (AI) để bình dân hóa việc tiếp cận pháp luật. Người dùng chỉ cần đặt câu hỏi bằng ngôn ngữ tự nhiên hàng ngày (ví dụ: “Một sinh viên gặp tình huống chủ nhà không hoàn trả tiền đặt cọc sau khi kết thúc hợp đồng thuê phòng”), hệ thống sẽ ngay lập tức trích xuất, tổng hợp và tóm tắt các điều khoản liên quan một cách ngắn gọn, dễ hiểu. Để đảm bảo độ chính xác tuyệt đối, mọi câu trả lời của LegalAI đều kèm theo liên kết dẫn đến văn bản quy phạm pháp luật gốc của Nhà nước để người dùng đối chiếu.</p></div>
+      <div class="col" data-rev><div class="num">03</div><h3>Khách hàng mục tiêu</h3>
+        <ul class="ds-kh">
+          <li>Các nhà sáng lập, quản lý doanh nghiệp nhỏ và vừa (SMEs), đội ngũ khởi nghiệp (startups) chưa có bộ phận pháp chế riêng.</li>
+          <li>Sinh viên, người lao động và người dân có nhu cầu tra cứu nhanh quy định pháp luật hoặc thủ tục hành chính trong cuộc sống hàng ngày.</li>
+        </ul></div>
     </div>
   </div>
 </section>
 
-<section class="band sang" id="ytuong">
+<section class="band toi" id="cachdung" style="background:var(--navy)">
   <div class="wrap">
-    <p class="mono eyebrow" data-rev>Vấn đề · Giải pháp · Khách hàng</p>
-    <h2 class="dis" data-split>Ba câu hỏi phải trả lời <em>ngay</em></h2>
-    <div class="grid g3">
-      <div class="col" data-rev><div class="num">01</div><h3>Vấn đề</h3>
-        <p>Bạn ký hợp đồng thuê trọ trong năm phút. Đến lúc chủ nhà giữ cọc, bạn mới mở ra đọc lần đầu. Tụi mình và bạn bè quanh mình đều từng như vậy: công ty chậm lương, shop online không hoàn tiền, hợp đồng thử việc kéo dài mãi. Lên mạng hỏi thì mỗi nơi nói một kiểu. Thuê luật sư cho một khoản cọc ba triệu thì ít ai nghĩ tới. Còn tự đọc luật thì văn bản dài, khó hiểu và hay được sửa đổi.</p></div>
-      <div class="col" data-rev><div class="num">02</div><h3>Giải pháp</h3>
-        <p>Legal AI là trợ lý pháp lý chỉ làm ba việc quen thuộc với người trẻ: thuê trọ, hợp đồng lao động và mua bán online. Bạn hỏi bằng tiếng Việt bình thường, như nhắn tin cho bạn. Câu trả lời ngắn, dễ hiểu và luôn ghi rõ tên văn bản, số điều, kèm đường dẫn tới văn bản gốc trên Cơ sở dữ liệu quốc gia về văn bản pháp luật. Đó là điểm khác với hỏi một chatbot chung chung: bạn không cần tin tụi mình, chỉ cần bấm vào và tự đọc. Legal AI không thay luật sư. Khi bạn đang có tranh chấp hoặc vụ việc phức tạp, ứng dụng sẽ nói thẳng và chỉ bạn tới luật sư hoặc Trung tâm trợ giúp pháp lý nhà nước.</p></div>
-      <div class="col" data-rev><div class="num">03</div><h3>Khách hàng</h3>
-        <p>Người dùng đầu tiên là sinh viên đang ở trọ và người mới đi làm. Họ cần câu trả lời nhanh cho những chuyện vài triệu đồng, không đủ lớn để thuê luật sư nhưng đủ để mất ngủ. Nhóm thứ hai là chủ shop online nhỏ, muốn biết mình phải làm gì khi khách đòi đổi trả. Hỏi đáp miễn phí; gói soát hợp đồng thuê trọ và hợp đồng lao động có tính phí. Ứng dụng không hỏi họ tên hay số điện thoại. Tụi mình bắt đầu từ chính lớp mình và khu trọ quanh trường.</p></div>
+    <p class="mono eyebrow" data-rev>Cách dùng LegalAI · 4 bước</p>
+    <h2 class="dis" data-split>Hỏi một câu, <em>thấy luật gốc</em></h2>
+    <div class="cd">
+      <figure class="cd-anh" data-rev>
+        <img src="imgs/cach-dung.svg" alt="Giao diện minh hoạ LegalAI trên điện thoại, đánh số 1 đến 4: (1) câu hỏi về việc chủ trọ giữ tiền cọc sau khi trả phòng; (2) câu trả lời tóm tắt: nếu đã thực hiện đúng hợp đồng thì chủ trọ phải trả lại cọc hoặc trừ vào khoản còn nợ; (3) hai nút mở văn bản gốc Điều 328 Bộ luật Dân sự 2015 và toàn văn trên vbpl.vn; (4) lời nhắc gặp luật sư hoặc trợ giúp pháp lý khi còn tranh chấp">
+        <figcaption class="mono">Giao diện minh hoạ · sản phẩm chưa vận hành thực tế</figcaption>
+      </figure>
+      <ol class="cd-buoc">
+        <li data-rev><b>Đặt câu hỏi bằng lời thường</b><span>Gõ tình huống như khi nhắn tin, không cần biết thuật ngữ pháp lý. Ví dụ: “Mình đã trả phòng, báo trước 30 ngày mà chủ trọ vẫn giữ tiền cọc. Vậy có đúng không?”</span></li>
+        <li data-rev><b>Nhận câu trả lời tóm tắt</b><span>LegalAI trích xuất, tổng hợp và tóm tắt các điều khoản liên quan thành vài câu ngắn, dễ hiểu.</span></li>
+        <li data-rev><b>Đối chiếu văn bản gốc</b><span>Mỗi câu trả lời ghi rõ tên văn bản, số điều và liên kết tới văn bản gốc của Nhà nước để tự kiểm tra. <a href="#hoi-coc">Xem câu trả lời mẫu đầy đủ</a>.</span></li>
+        <li data-rev><b>Biết khi nào cần luật sư</b><span>Nếu vụ việc đang tranh chấp hoặc phức tạp, LegalAI nói rõ và gợi ý gặp luật sư hoặc Trung tâm trợ giúp pháp lý nhà nước.</span></li>
+      </ol>
     </div>
   </div>
 </section>
@@ -445,22 +478,11 @@ body.editing [data-rev]{opacity:1!important;transform:none!important;transition:
 </section>
 
 <!-- ══════════ MỤC 3 — VIDEO MINH HỌA ══════════ -->
-<section class="stage sang" id="s3">
-  <div class="pin">
-    <div class="anh"><img src="imgs/iris.svg" alt="Ba tờ giấy nằm nghiêng: hợp đồng thuê nhà trọ, hợp đồng lao động, đơn hàng mua bán online, mỗi tờ có một đoạn được tô cam; phía dưới là biểu tượng kính lúp"></div>
-    <h2 class="dis" data-split>Chín mươi giây để <em>hiểu</em> Legal AI</h2>
-    <div class="cap mono">
-      <span>Mục 3 · Video giới thiệu 60–90 giây</span>
-      <span>Có phụ đề tiếng Việt · Có nhãn AI</span>
-    </div>
-  </div>
-</section>
-
 <section class="band sang" id="video">
   <div class="wrap">
     <p class="mono eyebrow" data-rev>Mục 3 · Video minh họa 60–90 giây</p>
-    <h2 class="dis" data-split>Xem Legal AI <em>hoạt động</em></h2>
-    <p class="lede" data-split>Một bạn sinh viên bị giữ tiền cọc, mở Legal AI hỏi bằng tiếng Việt và nhận câu trả lời kèm điều luật gốc.</p>
+    <h2 class="dis" data-split>Chín mươi giây để <em>hiểu</em> LegalAI</h2>
+    <p class="lede" data-split>Một sinh viên kết thúc hợp đồng thuê phòng nhưng chủ nhà không hoàn trả tiền đặt cọc. Video đi qua đủ 4 bước dùng LegalAI: hỏi, nhận tóm tắt, đối chiếu văn bản gốc, biết khi nào cần luật sư.</p>
     <div class="vid" id="videoBox" style="margin-top:34px" data-rev>
       <video controls preload="metadata" playsinline poster="video/poster-video.jpg" aria-label="Video minh hoạ Legal AI, 88 giây, có lời dẫn và phụ đề tiếng Việt">
         <source src="video/legal-ai-video.mp4" type="video/mp4">
@@ -470,11 +492,13 @@ body.editing [data-rev]{opacity:1!important;transform:none!important;transition:
     <p class="nhanvid" data-rev>Nội dung có sử dụng AI tạo sinh · 88 giây · lời dẫn bằng giọng đọc tổng hợp (mô hình Piper tiếng Việt, dữ liệu VAIS-1000, giấy phép CC BY 4.0) · nhạc nền do máy tự tạo · phụ đề tiếng Việt · nhân vật hư cấu, không dùng hình hay giọng người thật.</p>
     <p class="mono eyebrow" data-rev style="margin-top:clamp(48px,7vh,80px)">Kịch bản phân cảnh</p>
     <div class="rows" style="margin-top:0">
-      <div class="row" data-rev><b>0:00 – 0:16</b><span class="n">Mở đầu, công bố nhân vật hư cấu. Lan chuyển trọ, đã báo trước 30 ngày nhưng ba triệu tiền cọc vẫn chưa được trả</span><span class="v mono">Bối cảnh</span></div>
-      <div class="row" data-rev><b>0:16 – 0:26</b><span class="n">Hỏi trên mạng mỗi nơi một kiểu; thuê luật sư cho khoản cọc nhỏ thì ít ai nghĩ tới</span><span class="v mono">Vấn đề</span></div>
-      <div class="row" data-rev><b>0:26 – 0:46</b><span class="n">Lan hỏi Legal AI bằng tiếng Việt đời thường; câu trả lời kèm tên văn bản, số điều và đường dẫn văn bản gốc</span><span class="v mono">Giải pháp</span></div>
-      <div class="row" data-rev><b>0:46 – 1:04</b><span class="n">Lan tự đọc Điều 328 Bộ luật Dân sự 2015 về đặt cọc, đối chiếu hợp đồng thuê; còn tranh chấp thì được chỉ tới luật sư hoặc trợ giúp pháp lý</span><span class="v mono">Kiểm chứng</span></div>
-      <div class="row" data-rev><b>1:04 – 1:28</b><span class="n">Ba lĩnh vực, ba bước dùng Legal AI, khẩu hiệu “Hỏi luật dễ như nhắn tin”</span><span class="v mono">Kết thúc</span></div>
+      <div class="row" data-rev><b>0:00 – 0:16</b><span class="n">Mở đầu, nêu rõ nhân vật hư cấu. Lan kết thúc hợp đồng thuê phòng, đã báo trước một tháng nhưng ba triệu tiền cọc vẫn chưa được hoàn trả</span><span class="v mono">Bối cảnh</span></div>
+      <div class="row" data-rev><b>0:16 – 0:26</b><span class="n">Tra trên mạng mỗi nơi một kiểu; thuê luật sư cho khoản cọc nhỏ thì tốn kém</span><span class="v mono">Vấn đề</span></div>
+      <div class="row" data-rev><b>0:26 – 0:36</b><span class="n">Lan mở LegalAI, gõ câu hỏi bằng tiếng Việt đời thường như nhắn tin</span><span class="v mono">Bước 1 · Hỏi</span></div>
+      <div class="row" data-rev><b>0:36 – 0:46</b><span class="n">LegalAI trả lời ngắn gọn, kèm tên văn bản, số điều và liên kết văn bản gốc</span><span class="v mono">Bước 2 · Tóm tắt</span></div>
+      <div class="row" data-rev><b>0:46 – 0:56</b><span class="n">Lan bấm vào, tự đọc Điều 328 Bộ luật Dân sự 2015 về đặt cọc và đối chiếu với hợp đồng thuê của mình</span><span class="v mono">Bước 3 · Đối chiếu</span></div>
+      <div class="row" data-rev><b>0:56 – 1:04</b><span class="n">Nếu vẫn tranh chấp, LegalAI gợi ý gặp luật sư hoặc Trung tâm trợ giúp pháp lý nhà nước</span><span class="v mono">Bước 4 · Luật sư</span></div>
+      <div class="row" data-rev><b>1:04 – 1:28</b><span class="n">Ba lĩnh vực thường gặp, tóm tắt các bước dùng LegalAI, khẩu hiệu “Hỏi luật dễ như nhắn tin”</span><span class="v mono">Kết thúc</span></div>
     </div>
   </div>
 </section>
@@ -491,11 +515,16 @@ body.editing [data-rev]{opacity:1!important;transform:none!important;transition:
         <div class="tv-so">01</div>
         <div>
           <h3>Ý tưởng, nội dung, lập trình và hồ sơ nộp</h3>
-          <p class="tv-ten">Nguyễn Thuỳ Ánh Dương · MSSV 2506AV0292 · Lớp 2506AV5</p>
-          <p class="tv-ten">Trần Trung Kiên · MSSV 2506AV0140 · Lớp 2506AV3</p>
-          <p class="tv-ten">Nguyễn Sỹ Khiêm · MSSV 2506AV0141 · Lớp 2506AV3</p>
+          <table class="tv-bang">
+            <thead><tr><th scope="col">Họ và tên</th><th scope="col">MSSV</th><th scope="col">Lớp</th></tr></thead>
+            <tbody>
+              <tr><td>Nguyễn Thuỳ Ánh Dương</td><td>2506AV0292</td><td>2506AV5</td></tr>
+              <tr><td>Trần Trung Kiên</td><td>2506AV0140</td><td>2506AV3</td></tr>
+              <tr><td>Nguyễn Sỹ Khiêm</td><td>2506AV0141</td><td>2506AV3</td></tr>
+            </tbody>
+          </table>
           <ul>
-            <li>Xác định vấn đề, giải pháp và khách hàng: thuê trọ, hợp đồng lao động, mua bán online; viết Mục 1 và phần mở đầu trang</li>
+            <li>Xây dựng ý tưởng: vấn đề thực tiễn, giải pháp, khách hàng mục tiêu; viết Mục 1, phần mở đầu và 4 bước dùng LegalAI</li>
             <li>Soạn Câu hỏi thường gặp và các lưu ý “không thay luật sư”, “không phải tư vấn pháp lý”</li>
             <li>Viết mã HTML, CSS, JavaScript: hiệu ứng cuộn, chế độ chỉnh sửa <code>#sua</code>, hiển thị tốt trên điện thoại</li>
             <li>Quản lý kho GitHub, đăng trang lên GitHub Pages; lập Readme.md và đóng tệp zip nộp bài</li>
@@ -506,9 +535,14 @@ body.editing [data-rev]{opacity:1!important;transform:none!important;transition:
         <div class="tv-so">02</div>
         <div>
           <h3>Thông điệp và bộ nhận diện</h3>
-          <p class="tv-ten">Lê Minh An · MSSV 2506AV0131 · Lớp 2506AV3</p>
-          <p class="tv-ten">Hồ Thị Hằng · MSSV 2506AV0257 · Lớp 2506AV5</p>
-          <p class="tv-ten">Đỗ Thị Phương Hoài · MSSV 2506AV0293 · Lớp 2506AV5</p>
+          <table class="tv-bang">
+            <thead><tr><th scope="col">Họ và tên</th><th scope="col">MSSV</th><th scope="col">Lớp</th></tr></thead>
+            <tbody>
+              <tr><td>Lê Minh An</td><td>2506AV0131</td><td>2506AV3</td></tr>
+              <tr><td>Hồ Thị Hằng</td><td>2506AV0257</td><td>2506AV5</td></tr>
+              <tr><td>Đỗ Thị Phương Hoài</td><td>2506AV0293</td><td>2506AV5</td></tr>
+            </tbody>
+          </table>
           <ul>
             <li>Chọn thông điệp “Hỏi luật dễ như nhắn tin”, biểu tượng cán cân và bong bóng chat</li>
             <li>Chọn bảng màu xanh đậm, cam, kem và font chữ</li>
@@ -520,9 +554,14 @@ body.editing [data-rev]{opacity:1!important;transform:none!important;transition:
         <div class="tv-so">03</div>
         <div>
           <h3>Kịch bản và dựng video</h3>
-          <p class="tv-ten">Nguyễn Huỳnh Thanh Hoàng · MSSV 2506AV0294 · Lớp 2506AV5</p>
-          <p class="tv-ten">Lưu Chấn Huy · MSSV 2506AV0295 · Lớp 2506AV5</p>
-          <p class="tv-ten">Võ Văn Luân · MSSV 2506AV0242 · Lớp 2506AV4</p>
+          <table class="tv-bang">
+            <thead><tr><th scope="col">Họ và tên</th><th scope="col">MSSV</th><th scope="col">Lớp</th></tr></thead>
+            <tbody>
+              <tr><td>Nguyễn Huỳnh Thanh Hoàng</td><td>2506AV0294</td><td>2506AV5</td></tr>
+              <tr><td>Lưu Chấn Huy</td><td>2506AV0295</td><td>2506AV5</td></tr>
+              <tr><td>Võ Văn Luân</td><td>2506AV0242</td><td>2506AV4</td></tr>
+            </tbody>
+          </table>
           <ul>
             <li>Viết kịch bản 10 cảnh, 88 giây, nhân vật hư cấu</li>
             <li>Ghép ảnh tĩnh thành chuyển động, chuyển cảnh, chèn chữ và phụ đề tiếng Việt; lồng lời dẫn bằng giọng đọc tổng hợp và nhạc nền tự tạo</li>
@@ -534,9 +573,14 @@ body.editing [data-rev]{opacity:1!important;transform:none!important;transition:
         <div class="tv-so">04</div>
         <div>
           <h3>Kiểm chứng pháp lý và đạo đức</h3>
-          <p class="tv-ten">Lê Thị Hoài Thanh · MSSV 2506AV0288 · Lớp 2506AV5</p>
-          <p class="tv-ten">Lê Viết Thành · MSSV 2506AV0160 · Lớp 2506AV3</p>
-          <p class="tv-ten">Nguyễn Phát Thịnh · MSSV 2506AV0304 · Lớp 2506AV5</p>
+          <table class="tv-bang">
+            <thead><tr><th scope="col">Họ và tên</th><th scope="col">MSSV</th><th scope="col">Lớp</th></tr></thead>
+            <tbody>
+              <tr><td>Lê Thị Hoài Thanh</td><td>2506AV0288</td><td>2506AV5</td></tr>
+              <tr><td>Lê Viết Thành</td><td>2506AV0160</td><td>2506AV3</td></tr>
+              <tr><td>Nguyễn Phát Thịnh</td><td>2506AV0304</td><td>2506AV5</td></tr>
+            </tbody>
+          </table>
           <ul>
             <li>Đối chiếu từng căn cứ trên trang và trong video với văn bản gốc</li>
             <li>Kiểm tra nguồn tham khảo có thật, ghi đủ số hiệu văn bản</li>
@@ -548,9 +592,14 @@ body.editing [data-rev]{opacity:1!important;transform:none!important;transition:
         <div class="tv-so">05</div>
         <div>
           <h3>Thư viện câu lệnh, chính sách AI và kiểm thử trang</h3>
-          <p class="tv-ten">Trần Thị Thanh Thuý · MSSV 2506AV0230 · Lớp 2506AV4</p>
-          <p class="tv-ten">Phạm Kiều Tiên · MSSV 2506AV0333 · Lớp 2506AV5</p>
-          <p class="tv-ten">Hoàng Đức Kiên · MSSV 2606AV0348 · Lớp 2606AV3</p>
+          <table class="tv-bang">
+            <thead><tr><th scope="col">Họ và tên</th><th scope="col">MSSV</th><th scope="col">Lớp</th></tr></thead>
+            <tbody>
+              <tr><td>Trần Thị Thanh Thuý</td><td>2506AV0230</td><td>2506AV4</td></tr>
+              <tr><td>Phạm Kiều Tiên</td><td>2506AV0333</td><td>2506AV5</td></tr>
+              <tr><td>Hoàng Đức Kiên</td><td>2606AV0348</td><td>2606AV3</td></tr>
+            </tbody>
+          </table>
           <ul>
             <li>Tổng hợp thư viện câu lệnh: 18 câu lệnh, 10 kỹ thuật, gắn từng câu với phần tương ứng trên trang và ghi lại các lần tinh chỉnh</li>
             <li>Soạn chính sách sử dụng AI có trách nhiệm của nhóm</li>
@@ -702,7 +751,7 @@ body.editing [data-rev]{opacity:1!important;transform:none!important;transition:
   var CHO_SUA = location.protocol === "file:" || /^(localhost|127\.0\.0\.1)$/.test(location.hostname) || /sua/.test(location.hash);
   if (!CHO_SUA) return;
 
-  var SEL = "h1,h2,h3,p,summary,.row b,.row .n,.row .v,.strap span,.ph b,.nhanai b,nav b,.num,.so,.cap span,li";
+  var SEL = "h1,h2,h3,p,summary,.row b,.row .n,.row .v,.strap span,.ph b,.nhanai b,nav b,.num,.so,.cap span,li,td";
   var body = document.body;
   function qa(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
   function tao(tag, attrs, html){
