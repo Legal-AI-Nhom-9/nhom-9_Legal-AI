@@ -234,6 +234,13 @@ footer{background:var(--navy-deep);padding:clamp(56px,8vh,100px) 0 44px;border-t
 .chan .kh{background:var(--cream);border-radius:3px;padding:9px 13px;display:inline-flex}
 .chan .kh img{height:34px;width:auto}
 .chan p{margin:0;color:var(--mo-toi);font-size:14px}
+.chan-phai{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.nut-tai{display:inline-block;background:var(--cam-soft);color:var(--navy-deep);text-decoration:none;
+  font:700 13px/1.25 "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;
+  padding:12px 18px;border:2px solid var(--cream);border-radius:12px;min-height:44px;max-width:180px;
+  box-shadow:0 4px 14px rgba(0,0,0,.25);transition:background .2s,transform .2s}
+.nut-tai:hover{background:var(--cam);transform:translateY(-1px)}
+.nut-tai:focus-visible{outline:3px solid var(--cream);outline-offset:3px}
 
 /* khối tiến độ — xoá trước khi nộp */
 #tiendo{background:var(--navy);border-top:1px solid var(--line-toi)}
@@ -769,7 +776,10 @@ body.editing [data-rev]{opacity:1!important;transform:none!important;transition:
       <p><b>LEGAL AI</b> — dự án đồ án học phần, chưa phải dịch vụ đang hoạt động. Nội dung trên trang không phải tư vấn pháp lý.<br>
          Đồ án học phần <b>AI ứng dụng (06050)</b> · Viện Công nghệ tiên tiến và Trí tuệ nhân tạo<br>
          Trường Đại học Hùng Vương TP. Hồ Chí Minh · GVHD: TS. Nguyễn Quốc Trình</p>
-      <p class="mono">Hình minh hoạ: nhóm tạo, có hỗ trợ AI · Trang không thu thập thông tin cá nhân</p>
+      <div class="chan-phai">
+        <p class="mono">Hình minh hoạ: nhóm tạo, có hỗ trợ AI · Trang không thu thập thông tin cá nhân</p>
+        <a class="nut-tai" href="tai-ve/legal-ai-nhom9.zip" download>⬇ Tải trang web (.zip)</a>
+      </div>
     </div>
   </div>
 </footer>

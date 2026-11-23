@@ -51,6 +51,8 @@ docs/             ← kich-ban-video.md, thu-vien-cau-lenh.md, bang-xac-minh.md,
                     chinh-sach-ai.md, tao-video/make_video.py
 ```
 
+Nút “⬇ Tải trang web (.zip)” ở cuối trang tải tệp `tai-ve/legal-ai-nhom9.zip` (trang, hình, video, tài liệu). Khi sửa trang, nhớ đóng lại tệp này.
+
 Trong kho GitHub, trang nằm ở thư mục gốc (để GitHub Pages chạy); khi đóng zip, chép `index.html`, `imgs/`, `video/` vào `source_code/`.
 
 ## Sửa nội dung trang
