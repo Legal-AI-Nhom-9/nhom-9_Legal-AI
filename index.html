@@ -72,21 +72,26 @@ a{color:inherit}
 /* ═══ điều hướng ═══ */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:80;
-  display:flex;align-items:center;gap:26px;
-  padding:16px clamp(18px,5vw,54px);
-  background:linear-gradient(180deg,rgba(10,27,43,.82),rgba(10,27,43,0));
-  backdrop-filter:blur(3px);
+  display:flex;align-items:center;gap:clamp(16px,2.2vw,30px);
+  padding:12px clamp(16px,4vw,54px);
+  background:rgba(10,27,43,.92);
+  box-shadow:0 2px 18px rgba(0,0,0,.25);
+  backdrop-filter:blur(6px);
 }
-nav .kh{background:var(--cream);border-radius:3px;padding:5px 8px;display:flex}
-nav .kh img{height:20px;width:auto}
-nav b{font-stretch:78%;letter-spacing:.02em;font-size:15px;margin-right:auto;color:var(--cream)}
+nav .kh{background:var(--cream);border-radius:6px;padding:6px 10px;display:flex}
+nav .kh img{height:36px;width:auto}
+nav b{font-stretch:78%;letter-spacing:.03em;font-size:clamp(18px,1.9vw,24px);font-weight:800;margin-right:auto;color:var(--cream)}
 nav a{
-  color:var(--mo-toi);text-decoration:none;font-family:"IBM Plex Mono",monospace;
-  font-size:10px;letter-spacing:.18em;text-transform:uppercase;
-  transition:color .4s var(--E);
+  color:rgba(247,241,232,.86);text-decoration:none;font-family:"IBM Plex Mono",monospace;
+  font-size:clamp(12px,1vw,14px);font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+  padding:8px 0;transition:color .4s var(--E);
 }
 nav a:hover,nav a:focus-visible{color:var(--cam-soft)}
-@media(max-width:760px){nav .an{display:none}}
+@media(max-width:760px){
+  nav .an{display:none}
+  nav .kh img{height:30px}
+  nav .kh{padding:5px 8px}
+}
 
 /* ═══ sân khấu ghim ═══ */
 .stage{position:relative}
@@ -230,10 +235,12 @@ footer{background:var(--navy-deep);padding:clamp(56px,8vh,100px) 0 44px;border-t
 .nhanai{border:1px solid rgba(244,131,31,.38);padding:22px 26px;margin-bottom:38px;max-width:78ch}
 .nhanai b{color:var(--cam)}
 .nhanai p{margin:.6em 0 0;color:var(--mo-toi);font-size:14.5px}
-.chan{display:flex;gap:26px;justify-content:space-between;flex-wrap:wrap;align-items:flex-end}
-.chan .kh{background:var(--cream);border-radius:3px;padding:9px 13px;display:inline-flex}
-.chan .kh img{height:34px;width:auto}
+.chan{display:flex;gap:clamp(20px,3vw,36px);justify-content:space-between;flex-wrap:wrap;align-items:center}
+.chan .kh{background:var(--cream);border-radius:8px;padding:12px 18px;display:inline-flex}
+.chan .kh img{height:clamp(56px,6vw,76px);width:auto}
 .chan p{margin:0;color:var(--mo-toi);font-size:14px}
+.chan .chan-tt{font-size:clamp(15px,1.25vw,17px);line-height:1.75;color:rgba(247,241,232,.82);max-width:62ch}
+.chan .chan-tt b{color:var(--cream)}
 .chan-phai{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 .nut-tai{display:inline-block;background:var(--cam-soft);color:var(--navy-deep);text-decoration:none;
   font:700 13px/1.25 "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;
@@ -773,7 +780,7 @@ body.editing [data-rev]{opacity:1!important;transform:none!important;transition:
     </div>
     <div class="chan">
       <span class="kh"><img src="imgs/DHV_Logo.png" alt="Logo Trường Đại học Hùng Vương TP. Hồ Chí Minh"></span>
-      <p><b>LEGAL AI</b> — dự án đồ án học phần, chưa phải dịch vụ đang hoạt động. Nội dung trên trang không phải tư vấn pháp lý.<br>
+      <p class="chan-tt"><b>LEGAL AI</b> — dự án đồ án học phần, chưa phải dịch vụ đang hoạt động. Nội dung trên trang không phải tư vấn pháp lý.<br>
          Đồ án học phần <b>AI ứng dụng (06050)</b> · Viện Công nghệ tiên tiến và Trí tuệ nhân tạo<br>
          Trường Đại học Hùng Vương TP. Hồ Chí Minh · GVHD: TS. Nguyễn Quốc Trình</p>
       <div class="chan-phai">
