@@ -177,6 +177,7 @@ nói được thành tiếng, theo nhịp ba ví dụ:
 
 **Vì sao chọn:** Người xem cần hiểu cách dùng mà không phải đọc đoạn văn.
 **Tinh chỉnh (đã xảy ra):** Bản đầu, dòng mô tả ô 2 và ô 3 **bị cắt ở mép ô** (“số điề…”). Nhóm bổ sung ràng buộc “không chữ nào vượt ra ngoài ô” và ngắt mỗi mô tả thành ba dòng.
+Sau đó ô 1 đổi tiêu đề từ “Hỏi bằng tiếng Việt” thành **“Hỏi Legal AI”** cho rõ người dùng hỏi ai.
 **Kết quả:** Infographic đang ở Mục 2, chữ đọc đủ.
 
 ---
@@ -201,6 +202,7 @@ nói được thành tiếng, theo nhịp ba ví dụ:
 ```
 
 **Vì sao chọn:** Ảnh nền phải kể đúng tình huống chính (giữ cọc) và chừa chỗ cho tiêu đề.
+**Tinh chỉnh (đã xảy ra):** Chữ “ĐIỀU” trên ảnh dùng font Georgia nên trên máy Windows bị tách dấu (“ĐIÊ`U”); đổi sang Times New Roman / Tahoma có đủ dấu tiếng Việt.
 **Kết quả:** Ảnh nền phần mở đầu. Bong bóng trả lời chỉ ghi “Có 2 điều luật liên quan”, không ghi số điều, vì lúc dựng hình nhóm chưa kiểm chứng.
 
 ---

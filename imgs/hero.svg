@@ -15,7 +15,7 @@
   <rect width="1600" height="1000" fill="url(#glow)"/>
 
   <!-- trang văn bản luật mờ phía sau -->
-  <g opacity=".10" fill="#F7F1E8" font-family="Georgia,serif">
+  <g opacity=".10" fill="#F7F1E8" font-family="Times New Roman,Tahoma,Segoe UI,serif">
     <text x="90" y="150" font-size="30" font-weight="700">ĐIỀU 1.</text>
     <rect x="90" y="175" width="520" height="8"/><rect x="90" y="200" width="470" height="8"/><rect x="90" y="225" width="500" height="8"/>
     <text x="90" y="300" font-size="30" font-weight="700">ĐIỀU 2.</text>
