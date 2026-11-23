@@ -25,10 +25,10 @@
 | 1 | 0:00–0:07 | Nền xanh đậm, chữ trắng | “Chín mươi giây để hiểu Legal AI.” · *Nhân vật Lan là nhân vật hư cấu. Video chỉ dùng hình minh hoạ, không dùng hình hay giọng người thật.* |
 | 2 | 0:07–0:16 | Nền xanh đậm | “Cuối tháng, Lan chuyển trọ. Bạn đã báo chủ trọ trước một tháng, nhưng ba triệu tiền cọc vẫn chưa được trả lại.” |
 | 3 | 0:16–0:26 | Nền xanh đậm | “Hỏi trên mạng thì mỗi nơi nói một kiểu. Thuê luật sư cho khoản cọc ba triệu thì ít ai nghĩ tới.” |
-| 4 | 0:26–0:36 | `imgs/frame.svg` — điện thoại mở Legal AI | “Lan mở Legal AI và hỏi bằng tiếng Việt đời thường, như nhắn tin cho bạn.” |
-| 5 | 0:36–0:46 | `imgs/hero.svg` — cán cân, bong bóng chat | “Câu trả lời ngắn, dễ hiểu, kèm tên văn bản, số điều và đường dẫn tới văn bản gốc.” |
-| 6 | 0:46–0:56 | Nền kem | “Đặt cọc: Điều 328 Bộ luật Dân sự 2015. Lan bấm vào, tự đọc và đối chiếu với điều khoản tiền cọc trong hợp đồng thuê của mình.” |
-| 7 | 0:56–1:04 | Nền xanh đậm | “Còn tranh chấp? Legal AI nói thẳng và chỉ Lan tới luật sư hoặc Trung tâm trợ giúp pháp lý nhà nước.” |
+| 4 · Bước 1 Hỏi | 0:26–0:36 | `imgs/frame.svg` — điện thoại mở Legal AI | “Lan mở Legal AI và hỏi bằng tiếng Việt đời thường, như nhắn tin cho bạn.” |
+| 5 · Bước 2 Tóm tắt | 0:36–0:46 | `imgs/hero.svg` — cán cân, bong bóng chat | “Câu trả lời ngắn, dễ hiểu, kèm tên văn bản, số điều và đường dẫn tới văn bản gốc.” |
+| 6 · Bước 3 Đối chiếu | 0:46–0:56 | Nền kem | “Đặt cọc: Điều 328 Bộ luật Dân sự 2015. Lan bấm vào, tự đọc và đối chiếu với điều khoản tiền cọc trong hợp đồng thuê của mình.” |
+| 7 · Bước 4 Luật sư | 0:56–1:04 | Nền xanh đậm | “Còn tranh chấp? Legal AI nói thẳng và chỉ Lan tới luật sư hoặc Trung tâm trợ giúp pháp lý nhà nước.” |
 | 8 | 1:04–1:12 | `imgs/iris.svg` — ba loại giấy tờ | “Ba việc quen thuộc của người trẻ: thuê trọ, hợp đồng lao động, mua bán online.” |
 | 9 | 1:12–1:20 | `imgs/poster.svg` — infographic ba bước | “Hỏi bằng tiếng Việt. Đọc điều luật gốc. Biết khi nào cần luật sư.” |
 | 10 | 1:20–1:28 | `imgs/chu-de.svg` — logo | “Legal AI. Hỏi luật dễ như nhắn tin. Thông tin tham khảo, không thay thế tư vấn của luật sư.” |

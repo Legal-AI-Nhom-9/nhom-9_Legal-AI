@@ -87,7 +87,8 @@ Chỉ hỏi, chưa trả lời.
 ```
 
 **Vì sao chọn:** Cần đủ ý kinh doanh (khách hàng, thu tiền, giới hạn trách nhiệm) nhưng vẫn giữ giọng người trẻ.
-**Kết quả:** Ba đoạn đang ở Mục 1, nhóm đã đọc lại và biên tập. Câu mở đầu “Bạn ký hợp đồng thuê trọ trong năm phút. Đến lúc chủ nhà giữ cọc, bạn mới mở ra đọc lần đầu.” giữ đúng giọng của ví dụ.
+**Kết quả:** Bản nháp đầu dùng giọng “tụi mình”, mở đầu bằng “Bạn ký hợp đồng thuê trọ trong năm phút…”, tập trung sinh viên thuê trọ.
+**Tinh chỉnh (đã xảy ra):** Nhóm viết lại Mục 1 theo giọng trang trọng hơn và mở rộng khách hàng mục tiêu sang nhà sáng lập, doanh nghiệp nhỏ và vừa (SMEs), startup chưa có bộ phận pháp chế; câu hỏi ví dụ đổi thành “Một sinh viên gặp tình huống chủ nhà không hoàn trả tiền đặt cọc sau khi kết thúc hợp đồng thuê phòng”. Bản đang ở Mục 1 là bản nhóm viết lại.
 
 ---
 
@@ -206,7 +207,7 @@ nói được thành tiếng, theo nhịp ba ví dụ:
 
 ### 09 · Image prompting tám lớp — giao diện điện thoại
 
-**Dùng ở:** Mục 1 — `imgs/frame.svg` (khung mở dần khi cuộn)
+**Dùng ở:** Mục 1 — phần “Cách dùng LegalAI · 4 bước”, `imgs/cach-dung.svg` (bản đầu: `imgs/frame.svg`, vẫn dùng trong video)
 
 ```
 ① Chủ thể:   Điện thoại đang mở ứng dụng Legal AI.
@@ -227,7 +228,8 @@ nói được thành tiếng, theo nhịp ba ví dụ:
 ```
 
 **Vì sao chọn:** Cần cho thấy sản phẩm hoạt động thế nào mà không phải làm ứng dụng thật.
-**Kết quả:** Hình đang ở Mục 1. Câu trả lời để dạng thanh xám và “Điều …” để không đưa ra nội dung pháp lý chưa kiểm chứng.
+**Tinh chỉnh (đã xảy ra):** Bản đầu (`frame.svg`) để câu trả lời dạng thanh xám và nút “Điều …” vì lúc đó chưa kiểm chứng; trên trang, hình lại bị cắt dần khi cuộn nên người xem khó hiểu. Sau khi đối chiếu Điều 328 Bộ luật Dân sự 2015, nhóm vẽ lại thành `cach-dung.svg`: câu trả lời tóm tắt thật, nút “Điều 328 · Bộ luật Dân sự 2015”, đánh số 1–4 khớp với 4 bước ghi bên cạnh, hiện nguyên hình.
+**Kết quả:** Phần “Cách dùng LegalAI · 4 bước” ở Mục 1.
 
 ---
 
