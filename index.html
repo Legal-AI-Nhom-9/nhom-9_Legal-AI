@@ -87,10 +87,18 @@ nav a{
   padding:8px 0;transition:color .4s var(--E);
 }
 nav a:hover,nav a:focus-visible{color:var(--cam-soft)}
+nav .menu{display:flex;gap:clamp(16px,2.2vw,30px)}
+html{scroll-padding-top:84px}
 @media(max-width:760px){
-  nav .an{display:none}
+  nav{flex-wrap:wrap;row-gap:2px;padding:8px 16px 4px}
   nav .kh img{height:30px}
   nav .kh{padding:5px 8px}
+  nav .menu{flex:0 0 100%;justify-content:space-between;gap:12px;overflow-x:auto;scrollbar-width:none;
+    border-top:1px solid rgba(247,241,232,.14);margin-top:6px}
+  nav .menu::-webkit-scrollbar{display:none}
+  nav .menu a{font-size:12px;letter-spacing:.08em;white-space:nowrap;padding:10px 0}
+  html{scroll-padding-top:116px}
+  details{scroll-margin-top:122px}
 }
 
 /* ═══ sân khấu ghim ═══ */
@@ -453,11 +461,13 @@ body.editing [data-rev]{opacity:1!important;transform:none!important;transition:
 <nav>
   <span class="kh"><img src="imgs/DHV_Logo.png" alt="Logo Trường Đại học Hùng Vương TP. Hồ Chí Minh"></span>
   <b>LEGAL AI</b>
-  <a class="an" href="#ytuong">Ý tưởng</a>
-  <a class="an" href="#nhandien">Thông điệp</a>
-  <a class="an" href="#thu">Thử hỏi</a>
-  <a class="an" href="#video">Video</a>
-  <a href="#nhom">Nhóm</a>
+  <div class="menu">
+    <a href="#ytuong">Ý tưởng</a>
+    <a href="#nhandien">Thông điệp</a>
+    <a href="#thu">Thử hỏi</a>
+    <a href="#video">Video</a>
+    <a href="#nhom">Nhóm</a>
+  </div>
 </nav>
 
 <!-- ══════════ HERO ══════════ -->
