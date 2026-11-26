@@ -12,7 +12,7 @@ Mã nguồn: https://github.com/Legal-AI-Nhom-9/nhom-9_Legal-AI
 
 ## Thành viên nhóm
 
-Nhóm 9 · 15 thành viên · mọi thành viên nhận cùng điểm nhóm.
+Nhóm 9 · 15 thành viên.
 
 | STT | Họ và tên | MSSV | Lớp | Phần phụ trách |
 |---|---|---|---|---|
